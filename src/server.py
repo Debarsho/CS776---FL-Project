@@ -303,6 +303,9 @@ class Server(object):
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
 
+            if r%50==0 :
+                print(self.results['accuracy'])
+
             self.writer.add_scalars(
                 'Loss',
                 {f"[{self.dataset_name}]_{self.model.name} C_{self.fraction}, E_{self.local_epochs}, B_{self.batch_size}, IID_{self.iid}": test_loss},
@@ -320,4 +323,6 @@ class Server(object):
                 \n\t=> Accuracy: {100. * test_accuracy:.2f}%\n"            
             print(message); logging.info(message)
             del message; gc.collect()
+
         self.transmit_model()
+        print(self.results['accuracy'])

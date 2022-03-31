@@ -6,15 +6,15 @@ global_config:
 data_config:
   data_path: "./data/"
   dataset_name: "CIFAR10"
-  num_shards: 200
-  iid: False
+  num_shards: 300
+  iid: True
 ---
 fed_config:
   C: 0.1
   K: 100
-  R: 500
-  E: 10
-  B: 10
+  R: 400
+  E: 50
+  B: 20
   criterion: torch.nn.CrossEntropyLoss
   optimizer: torch.optim.SGD
 ---
