@@ -5,6 +5,7 @@ import logging
 import torch
 import torch.nn as nn
 
+
 from torch.utils.data import DataLoader
 
 logger = logging.getLogger(__name__)
@@ -50,6 +51,18 @@ class Client(object):
         self.criterion = client_config["criterion"]
         self.optimizer = client_config["optimizer"]
         self.optim_config = client_config["optim_config"]
+
+    def give_output(self, data):
+        self.model.eval()
+        self.model.to(self.device)
+        out = None
+
+        with torch.no_grad():
+            data = data.float().to(self.device)
+            out = self.model(data)
+
+        self.model.to("cpu")
+        return out
 
     def client_update(self):
         """Update local model using local dataset."""

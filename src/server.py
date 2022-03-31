@@ -89,8 +89,10 @@ class Server(object):
         del message; gc.collect()
 
         # split local dataset for each client
-        local_datasets, test_dataset = create_datasets(self.data_path, self.dataset_name, self.num_clients, self.num_shards, self.iid)
-        
+        local_datasets, test_dataset, u = create_datasets(self.data_path, self.dataset_name, self.num_clients, self.num_shards, self.iid)
+        self.u_data = u
+        # print(self.u_data.shape)
+
         # assign dataset to each client
         self.clients = self.create_clients(local_datasets)
 
@@ -236,10 +238,19 @@ class Server(object):
         self.clients[selected_index].client_evaluate()
         return True
 
+    def cluster(self, indices):
+        for idx in indices:
+            print(np.asarray(self.clients[idx].give_output(self.u_data).cpu()).shape)
+
+        return True
+
     def train_federated_model(self):
         """Do federated training."""
         # select pre-defined fraction of clients randomly
         sampled_client_indices = self.sample_clients()
+        
+        # clustering the selected clients based on the unlablled data
+        clusters = self.cluster(sampled_client_indices)
 
         # send global model to the selected clients
         self.transmit_model(sampled_client_indices)

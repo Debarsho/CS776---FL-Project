@@ -1,0 +1,25 @@
+[INFO](2022/03/31/ 08:34:06 AM) 
+[WELCOME] Unfolding configurations...!
+[INFO](2022/03/31/ 08:34:06 AM) {'global_config': {'seed': 5959, 'device': 'cuda', 'is_mp': True}}
+[INFO](2022/03/31/ 08:34:06 AM) {'data_config': {'data_path': './data/', 'dataset_name': 'CIFAR10', 'num_shards': 300, 'iid': True}}
+[INFO](2022/03/31/ 08:34:06 AM) {'fed_config': {'C': 0.1, 'K': 100, 'R': 400, 'E': 50, 'B': 20, 'criterion': 'torch.nn.CrossEntropyLoss', 'optimizer': 'torch.optim.SGD'}}
+[INFO](2022/03/31/ 08:34:06 AM) {'optim_config': {'lr': 0.01, 'momentum': 0.9}}
+[INFO](2022/03/31/ 08:34:06 AM) {'init_config': {'init_type': 'xavier', 'init_gain': 1.0, 'gpu_ids': [0, 1, 2]}}
+[INFO](2022/03/31/ 08:34:06 AM) {'model_config': {'name': 'CNN2', 'in_channels': 3, 'hidden_channels': 32, 'num_hiddens': 512, 'num_classes': 10}}
+[INFO](2022/03/31/ 08:34:06 AM) {'log_config': {'log_path': './log/2022-03-31_08:34:03', 'log_name': 'FL.log', 'tb_port': 5252, 'tb_host': '0.0.0.0'}}
+[INFO](2022/03/31/ 08:34:07 AM) [Round: 0000] ...successfully initialized model (# parameters: 2156490)!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0000] ...successfully created all 100 clients!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0000] ...successfully finished setup of all 100 clients!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0000] ...successfully transmitted models to all 100 clients!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Select clients...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] ...successfully transmitted models to 10 selected clients!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0024...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0008...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0042...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0050...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0049...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0084...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0027...!
+[INFO](2022/03/31/ 08:34:09 AM) [Round: 0001] Start updating selected client 0095...!
+[INFO](2022/03/31/ 08:34:10 AM) [Round: 0001] Start updating selected client 0059...!
+[INFO](2022/03/31/ 08:34:10 AM) [Round: 0001] Start updating selected client 0096...!

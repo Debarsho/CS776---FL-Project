@@ -143,6 +143,32 @@ def create_datasets(data_path, dataset_name, num_clients, num_shards, iid):
         training_dataset.data = np.asarray(training_dataset.data)
     if "list" not in str(type(training_dataset.targets)):
         training_dataset.targets = training_dataset.targets.tolist()
+
+    shuffled_indices = torch.randperm(len(training_dataset))
+    training_inputs = training_dataset.data[shuffled_indices]
+    unlabelled_data = training_inputs[0:100,:,:,:]
+    u_data = np.zeros((100,3,32,32), dtype = np.float32)
+    for i in range(100):
+        u_data[i,0,:,:] = unlabelled_data[i,:,:,0]
+        u_data[i,1,:,:] = unlabelled_data[i,:,:,1]
+        u_data[i,2,:,:] = unlabelled_data[i,:,:,2]
+    
+    print(u_data[0])
+    transform_u = torchvision.transforms.Compose(
+                [
+                    torchvision.transforms.ToTensor(),
+                    torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+                ]
+            )
+    
+    ret = torch.zeros([100,3,32,32], dtype = torch.float32)
+    #a = transform_u(unlabelled_data[0,:,:,:])
+    #print(np.asarray(a).shape,"******************************")
+    for i in range(100):
+        ret[i,:,:,:] = transform_u(unlabelled_data[i,:,:,:])
+
+    print(ret[0])
+    
     
     # split dataset according to iid flag
     if iid:
@@ -195,4 +221,4 @@ def create_datasets(data_path, dataset_name, num_clients, num_shards, iid):
             ) 
             for i in range(0, len(shard_inputs_sorted), shards_per_clients)
         ]
-    return local_datasets, test_dataset
+    return local_datasets, test_dataset, ret
