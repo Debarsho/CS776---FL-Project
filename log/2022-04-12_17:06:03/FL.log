@@ -1,0 +1,101 @@
+[INFO](2022/04/12/ 05:06:06 PM) 
+[WELCOME] Unfolding configurations...!
+[INFO](2022/04/12/ 05:06:06 PM) {'global_config': {'seed': 5959, 'device': 'cuda', 'is_mp': True}}
+[INFO](2022/04/12/ 05:06:06 PM) {'data_config': {'data_path': './data/', 'dataset_name': 'CIFAR10', 'num_shards': 300, 'iid': True}}
+[INFO](2022/04/12/ 05:06:06 PM) {'fed_config': {'C': 0.1, 'K': 100, 'R': 400, 'E': 50, 'B': 20, 'NC': 3, 'criterion': 'torch.nn.CrossEntropyLoss', 'optimizer': 'torch.optim.SGD'}}
+[INFO](2022/04/12/ 05:06:06 PM) {'optim_config': {'lr': 0.01, 'momentum': 0.9}}
+[INFO](2022/04/12/ 05:06:06 PM) {'init_config': {'init_type': 'xavier', 'init_gain': 1.0, 'gpu_ids': [0, 1, 2]}}
+[INFO](2022/04/12/ 05:06:06 PM) {'model_config': {'name': 'CNN2', 'in_channels': 3, 'hidden_channels': 32, 'num_hiddens': 512, 'num_classes': 10}}
+[INFO](2022/04/12/ 05:06:06 PM) {'log_config': {'log_path': './log/2022-04-12_17:06:03', 'log_name': 'FL.log', 'tb_port': 5252, 'tb_host': '0.0.0.0'}}
+[INFO](2022/04/12/ 05:06:16 PM) [Round: 0000] ...successfully initialized model (# parameters: 2156490)!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0000] ...successfully created all 100 clients!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0000] ...successfully finished setup of all 100 clients!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0000] ...successfully transmitted models to all 100 clients!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Select clients...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] ...successfully transmitted models to 10 selected clients!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0014...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0002...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0030...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0038...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0070...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0027...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0077...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0061...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0075...!
+[INFO](2022/04/12/ 05:06:21 PM) [Round: 0001] Start updating selected client 0062...!
+[INFO](2022/04/12/ 05:08:08 PM) [Round: 0001] ...client 0027 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:09 PM) [Round: 0001] ...client 0075 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:10 PM) [Round: 0001] ...client 0070 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:10 PM) [Round: 0001] ...client 0062 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:10 PM) [Round: 0001] ...client 0038 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:11 PM) [Round: 0001] ...client 0030 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:11 PM) [Round: 0001] ...client 0077 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:11 PM) [Round: 0001] ...client 0002 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:12 PM) [Round: 0001] ...client 0061 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:12 PM) [Round: 0001] ...client 0014 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/12/ 05:08:12 PM) [Round: 0001] Evaluate selected 10 clients' models...!
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0038] ...finished evaluation!            
+	=> Test loss: 0.0003            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0077] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0062] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0027] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0070] ...finished evaluation!            
+	=> Test loss: 0.0003            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0014] ...finished evaluation!            
+	=> Test loss: 0.0003            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0075] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0061] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0002] ...finished evaluation!            
+	=> Test loss: 0.0002            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:15 PM) 	[Client 0030] ...finished evaluation!            
+	=> Test loss: 0.0003            
+	=> Test accuracy: 100.00%
+
+[INFO](2022/04/12/ 05:08:17 PM) [Round: 0001] Aggregate updated weights of 10 clients...!
+[INFO](2022/04/12/ 05:08:17 PM) [Round: 0001] ...updated weights of 10 clients are successfully averaged!
+[INFO](2022/04/12/ 05:08:17 PM) [Round: 0001] Aggregate updated weights of 2 clients...!
+[INFO](2022/04/12/ 05:08:17 PM) [Round: 0001] ...updated weights of 2 clients are successfully averaged!
+[INFO](2022/04/12/ 05:08:17 PM) [Round: 0001] Aggregate updated weights of 4 clients...!
+[INFO](2022/04/12/ 05:08:18 PM) [Round: 0001] ...updated weights of 4 clients are successfully averaged!
+[INFO](2022/04/12/ 05:08:18 PM) [Round: 0001] Aggregate updated weights of 4 clients...!
+[INFO](2022/04/12/ 05:08:18 PM) [Round: 0001] ...updated weights of 4 clients are successfully averaged!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0001] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 2.2455                
+	=> Accuracy: 43.94%
+
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Select clients...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] ...successfully transmitted models to 10 selected clients!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0004...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0014...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0018...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0038...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0054...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0049...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0070...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0095...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0059...!
+[INFO](2022/04/12/ 05:08:24 PM) [Round: 0002] Start updating selected client 0072...!

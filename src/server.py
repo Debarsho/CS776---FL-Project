@@ -15,6 +15,8 @@ from .models import *
 from .utils import *
 from .client import Client
 
+from sklearn.cluster import KMeans
+
 logger = logging.getLogger(__name__)
 
 
@@ -52,6 +54,8 @@ class Server(object):
         self._round = 0
         self.writer = writer
 
+        self.clusters = dict();
+
         self.model = eval(model_config["name"])(**model_config)
         
         self.seed = global_config["seed"]
@@ -70,10 +74,13 @@ class Server(object):
         self.num_rounds = fed_config["R"]
         self.local_epochs = fed_config["E"]
         self.batch_size = fed_config["B"]
+        self.num_clusters = fed_config["NC"] +1 #for default cluster
 
         self.criterion = fed_config["criterion"]
         self.optimizer = fed_config["optimizer"]
         self.optim_config = optim_config
+
+        self.model_list = [eval(model_config["name"])(**model_config) for i in range(self.num_clusters)]
         
     def setup(self, **init_kwargs):
         """Set up all configuration for federated learning."""
@@ -83,6 +90,10 @@ class Server(object):
         # initialize weights of the model
         torch.manual_seed(self.seed)
         init_net(self.model, **self.init_config)
+        
+        for model in self.model_list:
+            init_net(model, **self.init_config)
+
 
         message = f"[Round: {str(self._round).zfill(4)}] ...successfully initialized model (# parameters: {str(sum(p.numel() for p in self.model.parameters()))})!"
         print(message); logging.info(message)
@@ -90,8 +101,12 @@ class Server(object):
 
         # split local dataset for each client
         local_datasets, test_dataset, u = create_datasets(self.data_path, self.dataset_name, self.num_clients, self.num_shards, self.iid)
-        self.u_data = u
+        self.u_data = u #inlabelled dataset
         # print(self.u_data.shape)
+
+        # Assign default clusters
+        for i in range(self.num_clients):
+            self.clusters[i]=0;
 
         # assign dataset to each client
         self.clients = self.create_clients(local_datasets)
@@ -220,6 +235,27 @@ class Server(object):
         print(message); logging.info(message)
         del message; gc.collect()
     
+    def average_model_cluster(self, sampled_client_indices, coefficients, c):
+        """Average the updated and transmitted parameters from each selected client."""
+        message = f"[Round: {str(self._round).zfill(4)}] Aggregate updated weights of {len(sampled_client_indices)} clients...!"
+        print(message); logging.info(message)
+        del message; gc.collect()
+
+        averaged_weights = OrderedDict()
+        for it, idx in tqdm(enumerate(sampled_client_indices), leave=False):
+            local_weights = self.clients[idx].model.state_dict()
+            for key in self.model.state_dict().keys():
+                if it == 0:
+                    averaged_weights[key] = coefficients[it] * local_weights[key]
+                else:
+                    averaged_weights[key] += coefficients[it] * local_weights[key]
+        self.model_list[c].load_state_dict(averaged_weights)
+
+        message = f"[Round: {str(self._round).zfill(4)}] ...updated weights of {len(sampled_client_indices)} clients are successfully averaged!"
+        print(message); logging.info(message)
+        del message; gc.collect()
+
+
     def evaluate_selected_models(self, sampled_client_indices):
         """Call "client_evaluate" function of each selected client."""
         message = f"[Round: {str(self._round).zfill(4)}] Evaluate selected {str(len(sampled_client_indices))} clients' models...!"
@@ -239,8 +275,19 @@ class Server(object):
         return True
 
     def cluster(self, indices):
+        outputs = []
         for idx in indices:
-            print(np.asarray(self.clients[idx].give_output(self.u_data).cpu()).shape)
+            outputs.append(np.asarray(self.clients[idx].give_output(self.u_data).cpu()).flatten())
+
+        outputs = np.asarray(outputs)
+        kmeans = KMeans(n_clusters = self.num_clusters-1, random_state=0).fit(outputs)
+
+        print(self.clusters)
+
+        for i,idx in enumerate(indices):
+            self.clusters[idx] = kmeans.labels_[i]+1
+
+        print(self.clusters)
 
         return True
 
@@ -249,11 +296,9 @@ class Server(object):
         # select pre-defined fraction of clients randomly
         sampled_client_indices = self.sample_clients()
         
-        # clustering the selected clients based on the unlablled data
-        clusters = self.cluster(sampled_client_indices)
-
         # send global model to the selected clients
         self.transmit_model(sampled_client_indices)
+    #TODO: transmit models to clients based on previous rounds clustering
 
         # updated selected clients with local dataset
         if self.mp_flag:
@@ -277,8 +322,27 @@ class Server(object):
         # calculate averaging coefficient of weights
         mixing_coefficients = [len(self.clients[idx]) / selected_total_size for idx in sampled_client_indices]
 
+         # clustering the selected clients based on the unlablled data
+        clusters = self.cluster(sampled_client_indices)
+    #TODO: To cluster models and save the clustering: Done with KMeans
+
         # average each updated model parameters of the selected clients and update the global model
         self.average_model(sampled_client_indices, mixing_coefficients)
+    #TODO: Average based on latest clusters
+
+        for c in range(1,self.num_clusters):
+            models_idx = []
+            for i in sampled_client_indices:
+                if self.clusters[i]==c:
+                    models_idx.append(i)
+            
+            temp_size=0
+            for idx in models_idx:
+                temp_size += len(self.clients[idx])
+
+            temp_mix = [len(self.clients[idx]) / temp_size for idx in models_idx]
+
+            self.average_model_cluster(models_idx, temp_mix, c)
         
     def evaluate_global_model(self):
         """Evaluate the global model using the global holdout dataset (self.data)."""
