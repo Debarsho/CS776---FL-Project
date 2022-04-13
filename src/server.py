@@ -169,6 +169,31 @@ class Server(object):
             print(message); logging.info(message)
             del message; gc.collect()
 
+    def transmit_model_cluster_wise(self, c, sampled_client_indices=None):
+        """Send the updated global model to selected/all clients."""
+        if sampled_client_indices is None:
+            # send the global model to all clients before the very first and after the last federated round
+            assert (self._round == 0) or (self._round == self.num_rounds)
+
+            for client in tqdm(self.clients, leave=False):
+                client.model = copy.deepcopy(self.model)
+
+            message = f"[Round: {str(self._round).zfill(4)}] ...successfully transmitted models to all {str(self.num_clients)} clients!"
+            print(message); logging.info(message)
+            del message; gc.collect()
+        else:
+            # send the global model to selected clients
+            assert self._round != 0
+
+            for idx in tqdm(sampled_client_indices, leave=False):
+                if self.clusters[idx]==c:
+                    self.clients[idx].model = copy.deepcopy(self.model_list[c])
+
+            message = f"[Round: {str(self._round).zfill(4)}] ...successfully transmitted models to {str(len(sampled_client_indices))} selected clients of cluster {c}!"
+            print(message); logging.info(message)
+            del message; gc.collect()
+
+
     def sample_clients(self):
         """Select some fraction of all clients."""
         # sample clients randommly
@@ -251,7 +276,7 @@ class Server(object):
                     averaged_weights[key] += coefficients[it] * local_weights[key]
         self.model_list[c].load_state_dict(averaged_weights)
 
-        message = f"[Round: {str(self._round).zfill(4)}] ...updated weights of {len(sampled_client_indices)} clients are successfully averaged!"
+        message = f"[Round: {str(self._round).zfill(4)}] ...updated weights of {len(sampled_client_indices)} clients of cluster {c} are successfully averaged!"
         print(message); logging.info(message)
         del message; gc.collect()
 
@@ -297,7 +322,10 @@ class Server(object):
         sampled_client_indices = self.sample_clients()
         
         # send global model to the selected clients
-        self.transmit_model(sampled_client_indices)
+        # self.transmit_model(sampled_client_indices)
+
+        for c in range(1,self.num_clusters):
+            self.transmit_model_cluster_wise(c, sampled_client_indices)
     #TODO: transmit models to clients based on previous rounds clustering
 
         # updated selected clients with local dataset
@@ -378,7 +406,7 @@ class Server(object):
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
 
-            if r%50==0 :
+            if r%50==0 or r%99==0:
                 print(self.results['accuracy'])
 
             self.writer.add_scalars(
