@@ -52,6 +52,10 @@ class Client(object):
         self.optimizer = client_config["optimizer"]
         self.optim_config = client_config["optim_config"]
 
+    def test_data(self, data, s):
+        self.test_dataloader = DataLoader(data, batch_size=s, shuffle=False)
+        self.test_data = data
+
     def give_output(self, data):
         self.model.eval()
         self.model.to(self.device)
@@ -91,7 +95,7 @@ class Client(object):
 
         test_loss, correct = 0, 0
         with torch.no_grad():
-            for data, labels in self.dataloader:
+            for data, labels in self.test_dataloader:
                 data, labels = data.float().to(self.device), labels.long().to(self.device)
                 outputs = self.model(data)
                 test_loss += eval(self.criterion)()(outputs, labels).item()
@@ -103,7 +107,7 @@ class Client(object):
         self.model.to("cpu")
 
         test_loss = test_loss / len(self.dataloader)
-        test_accuracy = correct / len(self.data)
+        test_accuracy = correct / len(self.test_data)
 
         message = f"\t[Client {str(self.id).zfill(4)}] ...finished evaluation!\
             \n\t=> Test loss: {test_loss:.4f}\

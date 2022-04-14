@@ -141,6 +141,7 @@ class Server(object):
         """Set up each client."""
         for k, client in tqdm(enumerate(self.clients), leave=False):
             client.setup(**client_config)
+            client.test_data(self.data, self.batch_size)
         
         message = f"[Round: {str(self._round).zfill(4)}] ...successfully finished setup of all {str(self.num_clients)} clients!"
         print(message); logging.info(message)
@@ -287,10 +288,14 @@ class Server(object):
         print(message); logging.info(message)
         del message; gc.collect()
 
-        for idx in sampled_client_indices:
-            self.clients[idx].client_evaluate()
+        acc = 0
 
-        message = f"[Round: {str(self._round).zfill(4)}] ...finished evaluation of {str(len(sampled_client_indices))} selected clients!"
+        for idx in sampled_client_indices:
+            tl, ta = self.clients[idx].client_evaluate()
+            acc += ta
+        acc = acc/len(sampled_client_indices)
+
+        message = f"[Round: {str(self._round).zfill(4)}] ...finished evaluation of {str(len(sampled_client_indices))} selected clients! Average accuracy = {acc}"
         print(message); logging.info(message)
         del message; gc.collect()
 
@@ -337,6 +342,7 @@ class Server(object):
             selected_total_size = self.update_selected_clients(sampled_client_indices)
 
         # evaluate selected clients with local dataset (same as the one used for local update)
+        """
         if self.mp_flag:
             message = f"[Round: {str(self._round).zfill(4)}] Evaluate selected {str(len(sampled_client_indices))} clients' models...!"
             print(message); logging.info(message)
@@ -346,6 +352,8 @@ class Server(object):
                 workhorse.map(self.mp_evaluate_selected_models, sampled_client_indices)
         else:
             self.evaluate_selected_models(sampled_client_indices)
+        """
+        self.evaluate_selected_models(sampled_client_indices)
 
         # calculate averaging coefficient of weights
         mixing_coefficients = [len(self.clients[idx]) / selected_total_size for idx in sampled_client_indices]
