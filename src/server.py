@@ -81,7 +81,8 @@ class Server(object):
         self.optim_config = optim_config
 
         self.model_list = [eval(model_config["name"])(**model_config) for i in range(self.num_clusters)]
-        
+        self.acc = []
+
     def setup(self, **init_kwargs):
         """Set up all configuration for federated learning."""
         # valid only before the very first round
@@ -293,7 +294,8 @@ class Server(object):
         for idx in sampled_client_indices:
             tl, ta = self.clients[idx].client_evaluate()
             acc += ta
-        acc = acc/len(sampled_client_indices)
+        acc = acc*10
+        self.acc.append(acc)
 
         message = f"[Round: {str(self._round).zfill(4)}] ...finished evaluation of {str(len(sampled_client_indices))} selected clients! Average accuracy = {acc}"
         print(message); logging.info(message)
@@ -414,8 +416,9 @@ class Server(object):
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
 
-            if r%50==0 or r%99==0:
-                print(self.results['accuracy'])
+            
+            print('Global model accuracy: ', self.results['accuracy'])
+            print('Client models avg accuracy: ', self.acc)
 
             self.writer.add_scalars(
                 'Loss',
