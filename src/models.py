@@ -64,12 +64,18 @@ class CNN2(nn.Module):
 
         self.conv1 = nn.Conv2d(in_channels=in_channels, out_channels=hidden_channels, kernel_size=(5, 5), padding=1, stride=1, bias=True)
         self.conv2 = nn.Conv2d(in_channels=hidden_channels, out_channels=hidden_channels * 2, kernel_size=(5, 5), padding=1, stride=1, bias=True)
-        
+       
+
+        self.conv3 = nn.Conv2d(in_channels=hidden_channels*2, out_channels=hidden_channels * 2, kernel_size=(3, 3), padding=1, stride=1, bias=True)
+
         self.maxpool1 = nn.MaxPool2d(kernel_size=(2, 2), padding=1)
         self.maxpool2 = nn.MaxPool2d(kernel_size=(2, 2), padding=1)
+        self.maxpool3 = nn.MaxPool2d(kernel_size=(2, 2), padding=1)
+        
         self.flatten = nn.Flatten()
 
         self.fc1 = nn.Linear(in_features=(hidden_channels * 2) * (8 * 8), out_features=num_hiddens, bias=True)
+        self.fc3 = nn.Linear(in_features=num_hiddens, out_features=num_hiddens, bias=True)
         self.fc2 = nn.Linear(in_features=num_hiddens, out_features=num_classes, bias=True)
 
     def forward(self, x):
@@ -78,9 +84,11 @@ class CNN2(nn.Module):
 
         x = self.activation(self.conv2(x))
         x = self.maxpool2(x)
+        x = self.activation(self.conv3(x))
         x = self.flatten(x)
     
         x = self.activation(self.fc1(x))
+        x = self.activation(self.fc3(x))
         x = self.fc2(x)
         
         return x

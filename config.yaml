@@ -10,7 +10,7 @@ data_config:
   iid: True
 ---
 fed_config:
-  C: 0.1
+  C: 0.4
   K: 100
   R: 100
   E: 50
@@ -26,7 +26,7 @@ optim_config:
 init_config:
   init_type: "xavier"
   init_gain: 1.0
-  gpu_ids: [0, 1, 2]
+  gpu_ids: [1, 2]
 ---
 model_config: 
   #name: TwoNN
