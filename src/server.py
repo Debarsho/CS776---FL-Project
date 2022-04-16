@@ -16,6 +16,7 @@ from .utils import *
 from .client import Client
 
 from sklearn.cluster import KMeans
+from sklearn.cluster import SpectralClustering
 
 logger = logging.getLogger(__name__)
 
@@ -312,12 +313,15 @@ class Server(object):
             outputs.append(np.asarray(self.clients[idx].give_output(self.u_data).cpu()).flatten())
 
         outputs = np.asarray(outputs)
-        kmeans = KMeans(n_clusters = self.num_clusters-1, random_state=0).fit(outputs)
+        #kmeans = KMeans(n_clusters = self.num_clusters-1, random_state=0).fit(outputs)
+        spec = SpectralClustering(n_clusters=self.num_clusters-1, assign_labels='discretize', random_state=0).fit(outputs)
+        
 
         print(self.clusters)
 
         for i,idx in enumerate(indices):
-            self.clusters[idx] = kmeans.labels_[i]+1
+            # self.clusters[idx] = kmeans.labels_[i]+1
+            self.clusters[idx] = spec.labels_[i]+1
 
         print(self.clusters)
 

@@ -1,0 +1,1663 @@
+[INFO](2022/04/15/ 02:54:40 PM) 
+[WELCOME] Unfolding configurations...!
+[INFO](2022/04/15/ 02:54:40 PM) {'global_config': {'seed': 5959, 'device': 'cuda', 'is_mp': True}}
+[INFO](2022/04/15/ 02:54:40 PM) {'data_config': {'data_path': './data/', 'dataset_name': 'CIFAR10', 'num_shards': 300, 'iid': True}}
+[INFO](2022/04/15/ 02:54:40 PM) {'fed_config': {'C': 0.4, 'K': 100, 'R': 100, 'E': 50, 'B': 20, 'NC': 4, 'criterion': 'torch.nn.CrossEntropyLoss', 'optimizer': 'torch.optim.SGD'}}
+[INFO](2022/04/15/ 02:54:40 PM) {'optim_config': {'lr': 0.01, 'momentum': 0.9}}
+[INFO](2022/04/15/ 02:54:40 PM) {'init_config': {'init_type': 'xavier', 'init_gain': 1.0, 'gpu_ids': [1, 2]}}
+[INFO](2022/04/15/ 02:54:40 PM) {'model_config': {'name': 'CNN2', 'in_channels': 3, 'hidden_channels': 32, 'num_hiddens': 512, 'num_classes': 10}}
+[INFO](2022/04/15/ 02:54:40 PM) {'log_config': {'log_path': './log/2022-04-15_14:54:37', 'log_name': 'FL.log', 'tb_port': 5252, 'tb_host': '0.0.0.0'}}
+[INFO](2022/04/15/ 02:54:42 PM) [Round: 0000] ...successfully initialized model (# parameters: 2456074)!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0000] ...successfully created all 100 clients!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0000] ...successfully finished setup of all 100 clients!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0000] ...successfully transmitted models to all 100 clients!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Select clients...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0002...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0001...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0009...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0004...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0019...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0023...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0024...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0022...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0011...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0027...!
+[INFO](2022/04/15/ 02:54:44 PM) [Round: 0001] Start updating selected client 0026...!
+[INFO](2022/04/15/ 02:57:04 PM) [Round: 0001] ...client 0022 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:04 PM) [Round: 0001] Start updating selected client 0030...!
+[INFO](2022/04/15/ 02:57:06 PM) [Round: 0001] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:06 PM) [Round: 0001] Start updating selected client 0031...!
+[INFO](2022/04/15/ 02:57:09 PM) [Round: 0001] ...client 0009 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:09 PM) [Round: 0001] Start updating selected client 0037...!
+[INFO](2022/04/15/ 02:57:11 PM) [Round: 0001] ...client 0002 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:11 PM) [Round: 0001] Start updating selected client 0041...!
+[INFO](2022/04/15/ 02:57:13 PM) [Round: 0001] ...client 0004 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:13 PM) [Round: 0001] Start updating selected client 0047...!
+[INFO](2022/04/15/ 02:57:15 PM) [Round: 0001] ...client 0011 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:15 PM) [Round: 0001] Start updating selected client 0048...!
+[INFO](2022/04/15/ 02:57:17 PM) [Round: 0001] ...client 0026 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:17 PM) [Round: 0001] Start updating selected client 0049...!
+[INFO](2022/04/15/ 02:57:19 PM) [Round: 0001] ...client 0001 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:19 PM) [Round: 0001] Start updating selected client 0052...!
+[INFO](2022/04/15/ 02:57:23 PM) [Round: 0001] ...client 0027 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:23 PM) [Round: 0001] Start updating selected client 0054...!
+[INFO](2022/04/15/ 02:57:27 PM) [Round: 0001] ...client 0019 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:27 PM) [Round: 0001] Start updating selected client 0055...!
+[INFO](2022/04/15/ 02:57:30 PM) [Round: 0001] ...client 0023 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:57:30 PM) [Round: 0001] Start updating selected client 0056...!
+[INFO](2022/04/15/ 02:59:16 PM) [Round: 0001] ...client 0030 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:16 PM) [Round: 0001] Start updating selected client 0057...!
+[INFO](2022/04/15/ 02:59:19 PM) [Round: 0001] ...client 0031 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:19 PM) [Round: 0001] Start updating selected client 0058...!
+[INFO](2022/04/15/ 02:59:22 PM) [Round: 0001] ...client 0037 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:22 PM) [Round: 0001] Start updating selected client 0062...!
+[INFO](2022/04/15/ 02:59:24 PM) [Round: 0001] ...client 0041 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:25 PM) [Round: 0001] Start updating selected client 0063...!
+[INFO](2022/04/15/ 02:59:27 PM) [Round: 0001] ...client 0047 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:27 PM) [Round: 0001] Start updating selected client 0067...!
+[INFO](2022/04/15/ 02:59:29 PM) [Round: 0001] ...client 0048 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:29 PM) [Round: 0001] Start updating selected client 0068...!
+[INFO](2022/04/15/ 02:59:31 PM) [Round: 0001] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:32 PM) [Round: 0001] Start updating selected client 0069...!
+[INFO](2022/04/15/ 02:59:35 PM) [Round: 0001] ...client 0052 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:35 PM) [Round: 0001] Start updating selected client 0071...!
+[INFO](2022/04/15/ 02:59:38 PM) [Round: 0001] ...client 0054 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:38 PM) [Round: 0001] Start updating selected client 0074...!
+[INFO](2022/04/15/ 02:59:43 PM) [Round: 0001] ...client 0055 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:43 PM) [Round: 0001] Start updating selected client 0076...!
+[INFO](2022/04/15/ 02:59:47 PM) [Round: 0001] ...client 0056 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 02:59:47 PM) [Round: 0001] Start updating selected client 0078...!
+[INFO](2022/04/15/ 03:01:06 PM) [Round: 0001] ...client 0057 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:06 PM) [Round: 0001] Start updating selected client 0080...!
+[INFO](2022/04/15/ 03:01:08 PM) [Round: 0001] ...client 0058 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:08 PM) [Round: 0001] Start updating selected client 0083...!
+[INFO](2022/04/15/ 03:01:11 PM) [Round: 0001] ...client 0062 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:11 PM) [Round: 0001] Start updating selected client 0090...!
+[INFO](2022/04/15/ 03:01:14 PM) [Round: 0001] ...client 0063 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:14 PM) [Round: 0001] Start updating selected client 0091...!
+[INFO](2022/04/15/ 03:01:16 PM) [Round: 0001] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:16 PM) [Round: 0001] Start updating selected client 0095...!
+[INFO](2022/04/15/ 03:01:19 PM) [Round: 0001] ...client 0068 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:19 PM) [Round: 0001] Start updating selected client 0096...!
+[INFO](2022/04/15/ 03:01:21 PM) [Round: 0001] ...client 0069 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:21 PM) [Round: 0001] Start updating selected client 0097...!
+[INFO](2022/04/15/ 03:01:26 PM) [Round: 0001] ...client 0071 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:29 PM) [Round: 0001] ...client 0074 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:34 PM) [Round: 0001] ...client 0076 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:01:38 PM) [Round: 0001] ...client 0078 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:17 PM) [Round: 0001] ...client 0080 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:19 PM) [Round: 0001] ...client 0083 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:20 PM) [Round: 0001] ...client 0090 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:21 PM) [Round: 0001] ...client 0091 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:22 PM) [Round: 0001] ...client 0095 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:23 PM) [Round: 0001] ...client 0096 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:23 PM) [Round: 0001] ...client 0097 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:02:23 PM) [Round: 0001] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:02:27 PM) 	[Client 0001] ...finished evaluation!            
+	=> Test loss: 118.5174            
+	=> Test accuracy: 33.53%
+
+[INFO](2022/04/15/ 03:02:31 PM) 	[Client 0002] ...finished evaluation!            
+	=> Test loss: 107.5123            
+	=> Test accuracy: 34.20%
+
+[INFO](2022/04/15/ 03:02:35 PM) 	[Client 0004] ...finished evaluation!            
+	=> Test loss: 119.3283            
+	=> Test accuracy: 34.59%
+
+[INFO](2022/04/15/ 03:02:39 PM) 	[Client 0009] ...finished evaluation!            
+	=> Test loss: 107.9936            
+	=> Test accuracy: 33.78%
+
+[INFO](2022/04/15/ 03:02:43 PM) 	[Client 0011] ...finished evaluation!            
+	=> Test loss: 107.4735            
+	=> Test accuracy: 34.00%
+
+[INFO](2022/04/15/ 03:02:47 PM) 	[Client 0019] ...finished evaluation!            
+	=> Test loss: 114.1560            
+	=> Test accuracy: 35.12%
+
+[INFO](2022/04/15/ 03:02:51 PM) 	[Client 0022] ...finished evaluation!            
+	=> Test loss: 108.6380            
+	=> Test accuracy: 34.63%
+
+[INFO](2022/04/15/ 03:02:55 PM) 	[Client 0023] ...finished evaluation!            
+	=> Test loss: 123.5906            
+	=> Test accuracy: 34.11%
+
+[INFO](2022/04/15/ 03:02:59 PM) 	[Client 0024] ...finished evaluation!            
+	=> Test loss: 106.0175            
+	=> Test accuracy: 35.27%
+
+[INFO](2022/04/15/ 03:03:03 PM) 	[Client 0026] ...finished evaluation!            
+	=> Test loss: 112.1083            
+	=> Test accuracy: 34.17%
+
+[INFO](2022/04/15/ 03:03:07 PM) 	[Client 0027] ...finished evaluation!            
+	=> Test loss: 114.8807            
+	=> Test accuracy: 35.18%
+
+[INFO](2022/04/15/ 03:03:11 PM) 	[Client 0030] ...finished evaluation!            
+	=> Test loss: 119.2466            
+	=> Test accuracy: 33.46%
+
+[INFO](2022/04/15/ 03:03:15 PM) 	[Client 0031] ...finished evaluation!            
+	=> Test loss: 107.6475            
+	=> Test accuracy: 34.92%
+
+[INFO](2022/04/15/ 03:03:19 PM) 	[Client 0037] ...finished evaluation!            
+	=> Test loss: 108.2876            
+	=> Test accuracy: 33.02%
+
+[INFO](2022/04/15/ 03:03:23 PM) 	[Client 0041] ...finished evaluation!            
+	=> Test loss: 116.6392            
+	=> Test accuracy: 36.04%
+
+[INFO](2022/04/15/ 03:03:27 PM) 	[Client 0047] ...finished evaluation!            
+	=> Test loss: 103.5357            
+	=> Test accuracy: 34.36%
+
+[INFO](2022/04/15/ 03:03:31 PM) 	[Client 0048] ...finished evaluation!            
+	=> Test loss: 111.9367            
+	=> Test accuracy: 35.34%
+
+[INFO](2022/04/15/ 03:03:35 PM) 	[Client 0049] ...finished evaluation!            
+	=> Test loss: 118.5168            
+	=> Test accuracy: 34.98%
+
+[INFO](2022/04/15/ 03:03:40 PM) 	[Client 0052] ...finished evaluation!            
+	=> Test loss: 119.9041            
+	=> Test accuracy: 33.66%
+
+[INFO](2022/04/15/ 03:03:43 PM) 	[Client 0054] ...finished evaluation!            
+	=> Test loss: 117.2137            
+	=> Test accuracy: 33.96%
+
+[INFO](2022/04/15/ 03:03:47 PM) 	[Client 0055] ...finished evaluation!            
+	=> Test loss: 115.9994            
+	=> Test accuracy: 33.01%
+
+[INFO](2022/04/15/ 03:03:52 PM) 	[Client 0056] ...finished evaluation!            
+	=> Test loss: 113.3411            
+	=> Test accuracy: 35.04%
+
+[INFO](2022/04/15/ 03:03:55 PM) 	[Client 0057] ...finished evaluation!            
+	=> Test loss: 113.6220            
+	=> Test accuracy: 32.37%
+
+[INFO](2022/04/15/ 03:03:59 PM) 	[Client 0058] ...finished evaluation!            
+	=> Test loss: 118.1455            
+	=> Test accuracy: 33.00%
+
+[INFO](2022/04/15/ 03:04:03 PM) 	[Client 0062] ...finished evaluation!            
+	=> Test loss: 108.3944            
+	=> Test accuracy: 34.98%
+
+[INFO](2022/04/15/ 03:04:07 PM) 	[Client 0063] ...finished evaluation!            
+	=> Test loss: 128.3195            
+	=> Test accuracy: 33.76%
+
+[INFO](2022/04/15/ 03:04:11 PM) 	[Client 0067] ...finished evaluation!            
+	=> Test loss: 114.9509            
+	=> Test accuracy: 34.09%
+
+[INFO](2022/04/15/ 03:04:15 PM) 	[Client 0068] ...finished evaluation!            
+	=> Test loss: 119.3484            
+	=> Test accuracy: 34.42%
+
+[INFO](2022/04/15/ 03:04:19 PM) 	[Client 0069] ...finished evaluation!            
+	=> Test loss: 113.5549            
+	=> Test accuracy: 32.09%
+
+[INFO](2022/04/15/ 03:04:23 PM) 	[Client 0071] ...finished evaluation!            
+	=> Test loss: 115.1353            
+	=> Test accuracy: 32.02%
+
+[INFO](2022/04/15/ 03:04:27 PM) 	[Client 0074] ...finished evaluation!            
+	=> Test loss: 118.6424            
+	=> Test accuracy: 33.27%
+
+[INFO](2022/04/15/ 03:04:31 PM) 	[Client 0076] ...finished evaluation!            
+	=> Test loss: 114.8716            
+	=> Test accuracy: 35.61%
+
+[INFO](2022/04/15/ 03:04:35 PM) 	[Client 0078] ...finished evaluation!            
+	=> Test loss: 123.1725            
+	=> Test accuracy: 33.75%
+
+[INFO](2022/04/15/ 03:04:39 PM) 	[Client 0080] ...finished evaluation!            
+	=> Test loss: 121.7108            
+	=> Test accuracy: 31.71%
+
+[INFO](2022/04/15/ 03:04:43 PM) 	[Client 0083] ...finished evaluation!            
+	=> Test loss: 116.2436            
+	=> Test accuracy: 33.05%
+
+[INFO](2022/04/15/ 03:04:47 PM) 	[Client 0090] ...finished evaluation!            
+	=> Test loss: 122.8023            
+	=> Test accuracy: 32.32%
+
+[INFO](2022/04/15/ 03:04:51 PM) 	[Client 0091] ...finished evaluation!            
+	=> Test loss: 126.1954            
+	=> Test accuracy: 33.72%
+
+[INFO](2022/04/15/ 03:04:55 PM) 	[Client 0095] ...finished evaluation!            
+	=> Test loss: 112.9852            
+	=> Test accuracy: 32.76%
+
+[INFO](2022/04/15/ 03:04:59 PM) 	[Client 0096] ...finished evaluation!            
+	=> Test loss: 107.1411            
+	=> Test accuracy: 33.83%
+
+[INFO](2022/04/15/ 03:05:03 PM) 	[Client 0097] ...finished evaluation!            
+	=> Test loss: 117.6084            
+	=> Test accuracy: 32.63%
+
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] ...finished evaluation of 40 selected clients! Average accuracy = 135.575
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] Aggregate updated weights of 3 clients...!
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] ...updated weights of 3 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:05:03 PM) [Round: 0001] Aggregate updated weights of 18 clients...!
+[INFO](2022/04/15/ 03:05:04 PM) [Round: 0001] ...updated weights of 18 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:05:04 PM) [Round: 0001] Aggregate updated weights of 18 clients...!
+[INFO](2022/04/15/ 03:05:04 PM) [Round: 0001] ...updated weights of 18 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:05:04 PM) [Round: 0001] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:05:04 PM) [Round: 0001] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0001] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.6266                
+	=> Accuracy: 42.77%
+
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Select clients...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0000...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0001...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0004...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0003...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0012...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0015...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0014...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0024...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0025...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0017...!
+[INFO](2022/04/15/ 03:05:08 PM) [Round: 0002] Start updating selected client 0010...!
+[INFO](2022/04/15/ 03:06:54 PM) [Round: 0002] ...client 0014 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:06:54 PM) [Round: 0002] Start updating selected client 0026...!
+[INFO](2022/04/15/ 03:06:56 PM) [Round: 0002] ...client 0000 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:06:56 PM) [Round: 0002] Start updating selected client 0031...!
+[INFO](2022/04/15/ 03:06:58 PM) [Round: 0002] ...client 0012 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:06:58 PM) [Round: 0002] Start updating selected client 0032...!
+[INFO](2022/04/15/ 03:07:00 PM) [Round: 0002] ...client 0025 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:00 PM) [Round: 0002] Start updating selected client 0036...!
+[INFO](2022/04/15/ 03:07:01 PM) [Round: 0002] ...client 0001 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:01 PM) [Round: 0002] Start updating selected client 0039...!
+[INFO](2022/04/15/ 03:07:02 PM) [Round: 0002] ...client 0003 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:02 PM) [Round: 0002] Start updating selected client 0040...!
+[INFO](2022/04/15/ 03:07:03 PM) [Round: 0002] ...client 0004 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:03 PM) [Round: 0002] Start updating selected client 0045...!
+[INFO](2022/04/15/ 03:07:04 PM) [Round: 0002] ...client 0015 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:04 PM) [Round: 0002] Start updating selected client 0047...!
+[INFO](2022/04/15/ 03:07:05 PM) [Round: 0002] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:05 PM) [Round: 0002] Start updating selected client 0049...!
+[INFO](2022/04/15/ 03:07:07 PM) [Round: 0002] ...client 0017 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:07 PM) [Round: 0002] Start updating selected client 0054...!
+[INFO](2022/04/15/ 03:07:10 PM) [Round: 0002] ...client 0010 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:07:10 PM) [Round: 0002] Start updating selected client 0057...!
+[INFO](2022/04/15/ 03:08:38 PM) [Round: 0002] ...client 0026 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:38 PM) [Round: 0002] Start updating selected client 0059...!
+[INFO](2022/04/15/ 03:08:40 PM) [Round: 0002] ...client 0031 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:40 PM) [Round: 0002] Start updating selected client 0060...!
+[INFO](2022/04/15/ 03:08:42 PM) [Round: 0002] ...client 0032 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:42 PM) [Round: 0002] Start updating selected client 0062...!
+[INFO](2022/04/15/ 03:08:45 PM) [Round: 0002] ...client 0036 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:45 PM) [Round: 0002] Start updating selected client 0063...!
+[INFO](2022/04/15/ 03:08:47 PM) [Round: 0002] ...client 0039 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:47 PM) [Round: 0002] Start updating selected client 0064...!
+[INFO](2022/04/15/ 03:08:48 PM) [Round: 0002] ...client 0040 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:48 PM) [Round: 0002] Start updating selected client 0065...!
+[INFO](2022/04/15/ 03:08:50 PM) [Round: 0002] ...client 0045 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:50 PM) [Round: 0002] Start updating selected client 0067...!
+[INFO](2022/04/15/ 03:08:52 PM) [Round: 0002] ...client 0047 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:52 PM) [Round: 0002] Start updating selected client 0073...!
+[INFO](2022/04/15/ 03:08:54 PM) [Round: 0002] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:54 PM) [Round: 0002] Start updating selected client 0076...!
+[INFO](2022/04/15/ 03:08:57 PM) [Round: 0002] ...client 0054 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:08:57 PM) [Round: 0002] Start updating selected client 0077...!
+[INFO](2022/04/15/ 03:09:01 PM) [Round: 0002] ...client 0057 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:09:02 PM) [Round: 0002] Start updating selected client 0079...!
+[INFO](2022/04/15/ 03:10:21 PM) [Round: 0002] ...client 0059 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:21 PM) [Round: 0002] Start updating selected client 0080...!
+[INFO](2022/04/15/ 03:10:24 PM) [Round: 0002] ...client 0060 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:24 PM) [Round: 0002] Start updating selected client 0081...!
+[INFO](2022/04/15/ 03:10:26 PM) [Round: 0002] ...client 0062 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:26 PM) [Round: 0002] Start updating selected client 0086...!
+[INFO](2022/04/15/ 03:10:29 PM) [Round: 0002] ...client 0063 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:30 PM) [Round: 0002] Start updating selected client 0087...!
+[INFO](2022/04/15/ 03:10:32 PM) [Round: 0002] ...client 0064 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:32 PM) [Round: 0002] Start updating selected client 0088...!
+[INFO](2022/04/15/ 03:10:34 PM) [Round: 0002] ...client 0065 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:34 PM) [Round: 0002] Start updating selected client 0091...!
+[INFO](2022/04/15/ 03:10:37 PM) [Round: 0002] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:37 PM) [Round: 0002] Start updating selected client 0099...!
+[INFO](2022/04/15/ 03:10:39 PM) [Round: 0002] ...client 0073 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:42 PM) [Round: 0002] ...client 0076 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:45 PM) [Round: 0002] ...client 0077 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:10:50 PM) [Round: 0002] ...client 0079 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:37 PM) [Round: 0002] ...client 0080 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:38 PM) [Round: 0002] ...client 0081 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:40 PM) [Round: 0002] ...client 0086 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:41 PM) [Round: 0002] ...client 0087 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:41 PM) [Round: 0002] ...client 0088 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:42 PM) [Round: 0002] ...client 0091 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:42 PM) [Round: 0002] ...client 0099 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:11:42 PM) [Round: 0002] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:11:46 PM) 	[Client 0000] ...finished evaluation!            
+	=> Test loss: 119.8352            
+	=> Test accuracy: 33.75%
+
+[INFO](2022/04/15/ 03:11:50 PM) 	[Client 0001] ...finished evaluation!            
+	=> Test loss: 103.8417            
+	=> Test accuracy: 36.08%
+
+[INFO](2022/04/15/ 03:11:53 PM) 	[Client 0003] ...finished evaluation!            
+	=> Test loss: 120.8756            
+	=> Test accuracy: 33.20%
+
+[INFO](2022/04/15/ 03:11:57 PM) 	[Client 0004] ...finished evaluation!            
+	=> Test loss: 127.8744            
+	=> Test accuracy: 34.66%
+
+[INFO](2022/04/15/ 03:12:00 PM) 	[Client 0010] ...finished evaluation!            
+	=> Test loss: 114.8097            
+	=> Test accuracy: 34.87%
+
+[INFO](2022/04/15/ 03:12:04 PM) 	[Client 0012] ...finished evaluation!            
+	=> Test loss: 119.4151            
+	=> Test accuracy: 32.67%
+
+[INFO](2022/04/15/ 03:12:08 PM) 	[Client 0014] ...finished evaluation!            
+	=> Test loss: 115.8493            
+	=> Test accuracy: 32.74%
+
+[INFO](2022/04/15/ 03:12:11 PM) 	[Client 0015] ...finished evaluation!            
+	=> Test loss: 99.5987            
+	=> Test accuracy: 35.67%
+
+[INFO](2022/04/15/ 03:12:15 PM) 	[Client 0017] ...finished evaluation!            
+	=> Test loss: 119.8543            
+	=> Test accuracy: 36.21%
+
+[INFO](2022/04/15/ 03:12:18 PM) 	[Client 0024] ...finished evaluation!            
+	=> Test loss: 92.5141            
+	=> Test accuracy: 38.44%
+
+[INFO](2022/04/15/ 03:12:22 PM) 	[Client 0025] ...finished evaluation!            
+	=> Test loss: 110.2519            
+	=> Test accuracy: 34.21%
+
+[INFO](2022/04/15/ 03:12:26 PM) 	[Client 0026] ...finished evaluation!            
+	=> Test loss: 92.6763            
+	=> Test accuracy: 36.20%
+
+[INFO](2022/04/15/ 03:12:29 PM) 	[Client 0031] ...finished evaluation!            
+	=> Test loss: 91.3602            
+	=> Test accuracy: 35.26%
+
+[INFO](2022/04/15/ 03:12:33 PM) 	[Client 0032] ...finished evaluation!            
+	=> Test loss: 110.0231            
+	=> Test accuracy: 34.96%
+
+[INFO](2022/04/15/ 03:12:36 PM) 	[Client 0036] ...finished evaluation!            
+	=> Test loss: 114.0488            
+	=> Test accuracy: 31.87%
+
+[INFO](2022/04/15/ 03:12:40 PM) 	[Client 0039] ...finished evaluation!            
+	=> Test loss: 119.3705            
+	=> Test accuracy: 33.54%
+
+[INFO](2022/04/15/ 03:12:44 PM) 	[Client 0040] ...finished evaluation!            
+	=> Test loss: 112.5523            
+	=> Test accuracy: 34.94%
+
+[INFO](2022/04/15/ 03:12:47 PM) 	[Client 0045] ...finished evaluation!            
+	=> Test loss: 114.2675            
+	=> Test accuracy: 33.54%
+
+[INFO](2022/04/15/ 03:12:51 PM) 	[Client 0047] ...finished evaluation!            
+	=> Test loss: 86.5500            
+	=> Test accuracy: 37.35%
+
+[INFO](2022/04/15/ 03:12:54 PM) 	[Client 0049] ...finished evaluation!            
+	=> Test loss: 105.4993            
+	=> Test accuracy: 35.53%
+
+[INFO](2022/04/15/ 03:12:57 PM) 	[Client 0054] ...finished evaluation!            
+	=> Test loss: 92.0062            
+	=> Test accuracy: 36.98%
+
+[INFO](2022/04/15/ 03:13:01 PM) 	[Client 0057] ...finished evaluation!            
+	=> Test loss: 89.7290            
+	=> Test accuracy: 36.67%
+
+[INFO](2022/04/15/ 03:13:04 PM) 	[Client 0059] ...finished evaluation!            
+	=> Test loss: 111.8646            
+	=> Test accuracy: 34.92%
+
+[INFO](2022/04/15/ 03:13:08 PM) 	[Client 0060] ...finished evaluation!            
+	=> Test loss: 119.9452            
+	=> Test accuracy: 33.45%
+
+[INFO](2022/04/15/ 03:13:12 PM) 	[Client 0062] ...finished evaluation!            
+	=> Test loss: 94.5270            
+	=> Test accuracy: 37.17%
+
+[INFO](2022/04/15/ 03:13:15 PM) 	[Client 0063] ...finished evaluation!            
+	=> Test loss: 94.9962            
+	=> Test accuracy: 36.03%
+
+[INFO](2022/04/15/ 03:13:19 PM) 	[Client 0064] ...finished evaluation!            
+	=> Test loss: 112.7374            
+	=> Test accuracy: 34.24%
+
+[INFO](2022/04/15/ 03:13:22 PM) 	[Client 0065] ...finished evaluation!            
+	=> Test loss: 112.2883            
+	=> Test accuracy: 32.93%
+
+[INFO](2022/04/15/ 03:13:26 PM) 	[Client 0067] ...finished evaluation!            
+	=> Test loss: 91.7983            
+	=> Test accuracy: 36.33%
+
+[INFO](2022/04/15/ 03:13:30 PM) 	[Client 0073] ...finished evaluation!            
+	=> Test loss: 124.6475            
+	=> Test accuracy: 34.35%
+
+[INFO](2022/04/15/ 03:13:34 PM) 	[Client 0076] ...finished evaluation!            
+	=> Test loss: 99.0816            
+	=> Test accuracy: 36.44%
+
+[INFO](2022/04/15/ 03:13:37 PM) 	[Client 0077] ...finished evaluation!            
+	=> Test loss: 114.8315            
+	=> Test accuracy: 34.51%
+
+[INFO](2022/04/15/ 03:13:41 PM) 	[Client 0079] ...finished evaluation!            
+	=> Test loss: 119.1253            
+	=> Test accuracy: 32.75%
+
+[INFO](2022/04/15/ 03:13:44 PM) 	[Client 0080] ...finished evaluation!            
+	=> Test loss: 93.6013            
+	=> Test accuracy: 35.22%
+
+[INFO](2022/04/15/ 03:13:48 PM) 	[Client 0081] ...finished evaluation!            
+	=> Test loss: 115.3742            
+	=> Test accuracy: 37.21%
+
+[INFO](2022/04/15/ 03:13:52 PM) 	[Client 0086] ...finished evaluation!            
+	=> Test loss: 111.9979            
+	=> Test accuracy: 33.79%
+
+[INFO](2022/04/15/ 03:13:56 PM) 	[Client 0087] ...finished evaluation!            
+	=> Test loss: 120.7036            
+	=> Test accuracy: 35.77%
+
+[INFO](2022/04/15/ 03:13:59 PM) 	[Client 0088] ...finished evaluation!            
+	=> Test loss: 110.3427            
+	=> Test accuracy: 33.51%
+
+[INFO](2022/04/15/ 03:14:03 PM) 	[Client 0091] ...finished evaluation!            
+	=> Test loss: 97.5061            
+	=> Test accuracy: 36.35%
+
+[INFO](2022/04/15/ 03:14:07 PM) 	[Client 0099] ...finished evaluation!            
+	=> Test loss: 105.5036            
+	=> Test accuracy: 34.37%
+
+[INFO](2022/04/15/ 03:14:07 PM) [Round: 0002] ...finished evaluation of 40 selected clients! Average accuracy = 139.868
+[INFO](2022/04/15/ 03:14:07 PM) [Round: 0002] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] Aggregate updated weights of 3 clients...!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] ...updated weights of 3 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] Aggregate updated weights of 28 clients...!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] ...updated weights of 28 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] Aggregate updated weights of 8 clients...!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] ...updated weights of 8 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:14:08 PM) [Round: 0002] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0002] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.6314                
+	=> Accuracy: 44.18%
+
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Select clients...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0000...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0001...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0014...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0016...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0015...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0020...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0027...!
+[INFO](2022/04/15/ 03:14:12 PM) [Round: 0003] Start updating selected client 0022...!
+[INFO](2022/04/15/ 03:14:13 PM) [Round: 0003] Start updating selected client 0028...!
+[INFO](2022/04/15/ 03:14:13 PM) [Round: 0003] Start updating selected client 0023...!
+[INFO](2022/04/15/ 03:14:13 PM) [Round: 0003] Start updating selected client 0024...!
+[INFO](2022/04/15/ 03:15:56 PM) [Round: 0003] ...client 0001 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:15:56 PM) [Round: 0003] Start updating selected client 0030...!
+[INFO](2022/04/15/ 03:15:58 PM) [Round: 0003] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:15:58 PM) [Round: 0003] Start updating selected client 0034...!
+[INFO](2022/04/15/ 03:15:59 PM) [Round: 0003] ...client 0000 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:15:59 PM) [Round: 0003] Start updating selected client 0035...!
+[INFO](2022/04/15/ 03:16:00 PM) [Round: 0003] ...client 0028 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:00 PM) [Round: 0003] Start updating selected client 0036...!
+[INFO](2022/04/15/ 03:16:01 PM) [Round: 0003] ...client 0014 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:01 PM) [Round: 0003] Start updating selected client 0037...!
+[INFO](2022/04/15/ 03:16:03 PM) [Round: 0003] ...client 0022 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:03 PM) [Round: 0003] Start updating selected client 0039...!
+[INFO](2022/04/15/ 03:16:03 PM) [Round: 0003] ...client 0023 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:03 PM) [Round: 0003] Start updating selected client 0040...!
+[INFO](2022/04/15/ 03:16:04 PM) [Round: 0003] ...client 0020 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:04 PM) [Round: 0003] Start updating selected client 0041...!
+[INFO](2022/04/15/ 03:16:06 PM) [Round: 0003] ...client 0016 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:06 PM) [Round: 0003] Start updating selected client 0045...!
+[INFO](2022/04/15/ 03:16:08 PM) [Round: 0003] ...client 0015 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:08 PM) [Round: 0003] Start updating selected client 0047...!
+[INFO](2022/04/15/ 03:16:09 PM) [Round: 0003] ...client 0027 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:16:09 PM) [Round: 0003] Start updating selected client 0048...!
+[INFO](2022/04/15/ 03:17:41 PM) [Round: 0003] ...client 0030 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:41 PM) [Round: 0003] Start updating selected client 0049...!
+[INFO](2022/04/15/ 03:17:43 PM) [Round: 0003] ...client 0034 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:43 PM) [Round: 0003] Start updating selected client 0051...!
+[INFO](2022/04/15/ 03:17:45 PM) [Round: 0003] ...client 0035 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:45 PM) [Round: 0003] Start updating selected client 0052...!
+[INFO](2022/04/15/ 03:17:47 PM) [Round: 0003] ...client 0036 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:47 PM) [Round: 0003] Start updating selected client 0056...!
+[INFO](2022/04/15/ 03:17:48 PM) [Round: 0003] ...client 0037 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:49 PM) [Round: 0003] Start updating selected client 0060...!
+[INFO](2022/04/15/ 03:17:50 PM) [Round: 0003] ...client 0039 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:50 PM) [Round: 0003] Start updating selected client 0067...!
+[INFO](2022/04/15/ 03:17:52 PM) [Round: 0003] ...client 0040 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:52 PM) [Round: 0003] Start updating selected client 0070...!
+[INFO](2022/04/15/ 03:17:54 PM) [Round: 0003] ...client 0041 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:54 PM) [Round: 0003] Start updating selected client 0073...!
+[INFO](2022/04/15/ 03:17:56 PM) [Round: 0003] ...client 0045 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:17:56 PM) [Round: 0003] Start updating selected client 0075...!
+[INFO](2022/04/15/ 03:18:00 PM) [Round: 0003] ...client 0047 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:18:00 PM) [Round: 0003] Start updating selected client 0078...!
+[INFO](2022/04/15/ 03:18:04 PM) [Round: 0003] ...client 0048 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:18:04 PM) [Round: 0003] Start updating selected client 0079...!
+[INFO](2022/04/15/ 03:19:26 PM) [Round: 0003] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:26 PM) [Round: 0003] Start updating selected client 0082...!
+[INFO](2022/04/15/ 03:19:29 PM) [Round: 0003] ...client 0051 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:29 PM) [Round: 0003] Start updating selected client 0084...!
+[INFO](2022/04/15/ 03:19:31 PM) [Round: 0003] ...client 0052 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:31 PM) [Round: 0003] Start updating selected client 0086...!
+[INFO](2022/04/15/ 03:19:33 PM) [Round: 0003] ...client 0056 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:33 PM) [Round: 0003] Start updating selected client 0087...!
+[INFO](2022/04/15/ 03:19:35 PM) [Round: 0003] ...client 0060 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:35 PM) [Round: 0003] Start updating selected client 0094...!
+[INFO](2022/04/15/ 03:19:37 PM) [Round: 0003] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:37 PM) [Round: 0003] Start updating selected client 0095...!
+[INFO](2022/04/15/ 03:19:39 PM) [Round: 0003] ...client 0070 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:39 PM) [Round: 0003] Start updating selected client 0099...!
+[INFO](2022/04/15/ 03:19:43 PM) [Round: 0003] ...client 0073 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:46 PM) [Round: 0003] ...client 0075 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:50 PM) [Round: 0003] ...client 0078 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:19:54 PM) [Round: 0003] ...client 0079 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:43 PM) [Round: 0003] ...client 0082 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:45 PM) [Round: 0003] ...client 0084 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:46 PM) [Round: 0003] ...client 0086 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:46 PM) [Round: 0003] ...client 0087 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:47 PM) [Round: 0003] ...client 0094 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:48 PM) [Round: 0003] ...client 0095 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:48 PM) [Round: 0003] ...client 0099 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:20:48 PM) [Round: 0003] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:20:52 PM) 	[Client 0000] ...finished evaluation!            
+	=> Test loss: 91.0206            
+	=> Test accuracy: 37.22%
+
+[INFO](2022/04/15/ 03:20:55 PM) 	[Client 0001] ...finished evaluation!            
+	=> Test loss: 90.1918            
+	=> Test accuracy: 37.65%
+
+[INFO](2022/04/15/ 03:20:58 PM) 	[Client 0014] ...finished evaluation!            
+	=> Test loss: 91.0559            
+	=> Test accuracy: 37.71%
+
+[INFO](2022/04/15/ 03:21:02 PM) 	[Client 0015] ...finished evaluation!            
+	=> Test loss: 81.8126            
+	=> Test accuracy: 39.69%
+
+[INFO](2022/04/15/ 03:21:05 PM) 	[Client 0016] ...finished evaluation!            
+	=> Test loss: 108.0019            
+	=> Test accuracy: 35.52%
+
+[INFO](2022/04/15/ 03:21:09 PM) 	[Client 0020] ...finished evaluation!            
+	=> Test loss: 111.1740            
+	=> Test accuracy: 34.67%
+
+[INFO](2022/04/15/ 03:21:12 PM) 	[Client 0022] ...finished evaluation!            
+	=> Test loss: 91.0491            
+	=> Test accuracy: 36.15%
+
+[INFO](2022/04/15/ 03:21:16 PM) 	[Client 0023] ...finished evaluation!            
+	=> Test loss: 94.3175            
+	=> Test accuracy: 37.99%
+
+[INFO](2022/04/15/ 03:21:19 PM) 	[Client 0024] ...finished evaluation!            
+	=> Test loss: 87.0747            
+	=> Test accuracy: 38.27%
+
+[INFO](2022/04/15/ 03:21:23 PM) 	[Client 0027] ...finished evaluation!            
+	=> Test loss: 82.3859            
+	=> Test accuracy: 38.90%
+
+[INFO](2022/04/15/ 03:21:27 PM) 	[Client 0028] ...finished evaluation!            
+	=> Test loss: 112.7291            
+	=> Test accuracy: 34.56%
+
+[INFO](2022/04/15/ 03:21:30 PM) 	[Client 0030] ...finished evaluation!            
+	=> Test loss: 95.2715            
+	=> Test accuracy: 36.57%
+
+[INFO](2022/04/15/ 03:21:34 PM) 	[Client 0034] ...finished evaluation!            
+	=> Test loss: 110.0804            
+	=> Test accuracy: 31.99%
+
+[INFO](2022/04/15/ 03:21:37 PM) 	[Client 0035] ...finished evaluation!            
+	=> Test loss: 110.2640            
+	=> Test accuracy: 33.51%
+
+[INFO](2022/04/15/ 03:21:41 PM) 	[Client 0036] ...finished evaluation!            
+	=> Test loss: 87.7404            
+	=> Test accuracy: 38.11%
+
+[INFO](2022/04/15/ 03:21:45 PM) 	[Client 0037] ...finished evaluation!            
+	=> Test loss: 78.6214            
+	=> Test accuracy: 37.74%
+
+[INFO](2022/04/15/ 03:21:49 PM) 	[Client 0039] ...finished evaluation!            
+	=> Test loss: 88.9551            
+	=> Test accuracy: 37.37%
+
+[INFO](2022/04/15/ 03:21:53 PM) 	[Client 0040] ...finished evaluation!            
+	=> Test loss: 90.8819            
+	=> Test accuracy: 38.50%
+
+[INFO](2022/04/15/ 03:21:57 PM) 	[Client 0041] ...finished evaluation!            
+	=> Test loss: 88.8605            
+	=> Test accuracy: 40.02%
+
+[INFO](2022/04/15/ 03:22:01 PM) 	[Client 0045] ...finished evaluation!            
+	=> Test loss: 87.9270            
+	=> Test accuracy: 36.60%
+
+[INFO](2022/04/15/ 03:22:05 PM) 	[Client 0047] ...finished evaluation!            
+	=> Test loss: 82.2918            
+	=> Test accuracy: 37.81%
+
+[INFO](2022/04/15/ 03:22:09 PM) 	[Client 0048] ...finished evaluation!            
+	=> Test loss: 84.3686            
+	=> Test accuracy: 40.16%
+
+[INFO](2022/04/15/ 03:22:13 PM) 	[Client 0049] ...finished evaluation!            
+	=> Test loss: 100.8981            
+	=> Test accuracy: 36.02%
+
+[INFO](2022/04/15/ 03:22:17 PM) 	[Client 0051] ...finished evaluation!            
+	=> Test loss: 107.7826            
+	=> Test accuracy: 35.45%
+
+[INFO](2022/04/15/ 03:22:21 PM) 	[Client 0052] ...finished evaluation!            
+	=> Test loss: 92.1209            
+	=> Test accuracy: 35.70%
+
+[INFO](2022/04/15/ 03:22:26 PM) 	[Client 0056] ...finished evaluation!            
+	=> Test loss: 84.1971            
+	=> Test accuracy: 38.24%
+
+[INFO](2022/04/15/ 03:22:30 PM) 	[Client 0060] ...finished evaluation!            
+	=> Test loss: 83.8492            
+	=> Test accuracy: 38.74%
+
+[INFO](2022/04/15/ 03:22:34 PM) 	[Client 0067] ...finished evaluation!            
+	=> Test loss: 87.7804            
+	=> Test accuracy: 37.62%
+
+[INFO](2022/04/15/ 03:22:38 PM) 	[Client 0070] ...finished evaluation!            
+	=> Test loss: 116.9232            
+	=> Test accuracy: 34.56%
+
+[INFO](2022/04/15/ 03:22:42 PM) 	[Client 0073] ...finished evaluation!            
+	=> Test loss: 92.8726            
+	=> Test accuracy: 37.33%
+
+[INFO](2022/04/15/ 03:22:46 PM) 	[Client 0075] ...finished evaluation!            
+	=> Test loss: 114.1741            
+	=> Test accuracy: 35.23%
+
+[INFO](2022/04/15/ 03:22:49 PM) 	[Client 0078] ...finished evaluation!            
+	=> Test loss: 91.6112            
+	=> Test accuracy: 37.94%
+
+[INFO](2022/04/15/ 03:22:53 PM) 	[Client 0079] ...finished evaluation!            
+	=> Test loss: 89.9197            
+	=> Test accuracy: 36.70%
+
+[INFO](2022/04/15/ 03:22:58 PM) 	[Client 0082] ...finished evaluation!            
+	=> Test loss: 112.9860            
+	=> Test accuracy: 33.42%
+
+[INFO](2022/04/15/ 03:23:01 PM) 	[Client 0084] ...finished evaluation!            
+	=> Test loss: 105.4884            
+	=> Test accuracy: 33.82%
+
+[INFO](2022/04/15/ 03:23:06 PM) 	[Client 0086] ...finished evaluation!            
+	=> Test loss: 93.1673            
+	=> Test accuracy: 36.82%
+
+[INFO](2022/04/15/ 03:23:10 PM) 	[Client 0087] ...finished evaluation!            
+	=> Test loss: 96.5980            
+	=> Test accuracy: 38.26%
+
+[INFO](2022/04/15/ 03:23:14 PM) 	[Client 0094] ...finished evaluation!            
+	=> Test loss: 123.1884            
+	=> Test accuracy: 33.81%
+
+[INFO](2022/04/15/ 03:23:18 PM) 	[Client 0095] ...finished evaluation!            
+	=> Test loss: 87.6902            
+	=> Test accuracy: 37.91%
+
+[INFO](2022/04/15/ 03:23:22 PM) 	[Client 0099] ...finished evaluation!            
+	=> Test loss: 87.1948            
+	=> Test accuracy: 38.70%
+
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] ...finished evaluation of 40 selected clients! Average accuracy = 147.29799999999997
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] ...updated weights of 1 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] Aggregate updated weights of 31 clients...!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] ...updated weights of 31 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:23:22 PM) [Round: 0003] Aggregate updated weights of 7 clients...!
+[INFO](2022/04/15/ 03:23:23 PM) [Round: 0003] ...updated weights of 7 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:23:23 PM) [Round: 0003] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:23:23 PM) [Round: 0003] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0003] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.6573                
+	=> Accuracy: 47.64%
+
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Select clients...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0009...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0008...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0013...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0025...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0021...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0023...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0020...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0024...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0026...!
+[INFO](2022/04/15/ 03:23:27 PM) [Round: 0004] Start updating selected client 0019...!
+[INFO](2022/04/15/ 03:23:28 PM) [Round: 0004] Start updating selected client 0029...!
+[INFO](2022/04/15/ 03:25:10 PM) [Round: 0004] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:10 PM) [Round: 0004] Start updating selected client 0030...!
+[INFO](2022/04/15/ 03:25:13 PM) [Round: 0004] ...client 0026 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:13 PM) [Round: 0004] Start updating selected client 0032...!
+[INFO](2022/04/15/ 03:25:14 PM) [Round: 0004] ...client 0023 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:14 PM) [Round: 0004] Start updating selected client 0036...!
+[INFO](2022/04/15/ 03:25:15 PM) [Round: 0004] ...client 0008 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:15 PM) [Round: 0004] Start updating selected client 0037...!
+[INFO](2022/04/15/ 03:25:17 PM) [Round: 0004] ...client 0019 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:17 PM) [Round: 0004] Start updating selected client 0038...!
+[INFO](2022/04/15/ 03:25:19 PM) [Round: 0004] ...client 0021 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:19 PM) [Round: 0004] Start updating selected client 0044...!
+[INFO](2022/04/15/ 03:25:20 PM) [Round: 0004] ...client 0013 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:20 PM) [Round: 0004] Start updating selected client 0045...!
+[INFO](2022/04/15/ 03:25:21 PM) [Round: 0004] ...client 0009 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:22 PM) [Round: 0004] Start updating selected client 0046...!
+[INFO](2022/04/15/ 03:25:23 PM) [Round: 0004] ...client 0025 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:23 PM) [Round: 0004] Start updating selected client 0052...!
+[INFO](2022/04/15/ 03:25:26 PM) [Round: 0004] ...client 0020 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:26 PM) [Round: 0004] Start updating selected client 0059...!
+[INFO](2022/04/15/ 03:25:28 PM) [Round: 0004] ...client 0029 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:25:29 PM) [Round: 0004] Start updating selected client 0061...!
+[INFO](2022/04/15/ 03:26:58 PM) [Round: 0004] ...client 0030 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:26:59 PM) [Round: 0004] Start updating selected client 0063...!
+[INFO](2022/04/15/ 03:27:01 PM) [Round: 0004] ...client 0032 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:01 PM) [Round: 0004] Start updating selected client 0065...!
+[INFO](2022/04/15/ 03:27:03 PM) [Round: 0004] ...client 0036 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:03 PM) [Round: 0004] Start updating selected client 0067...!
+[INFO](2022/04/15/ 03:27:05 PM) [Round: 0004] ...client 0037 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:05 PM) [Round: 0004] Start updating selected client 0069...!
+[INFO](2022/04/15/ 03:27:07 PM) [Round: 0004] ...client 0038 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:07 PM) [Round: 0004] Start updating selected client 0070...!
+[INFO](2022/04/15/ 03:27:10 PM) [Round: 0004] ...client 0044 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:10 PM) [Round: 0004] Start updating selected client 0071...!
+[INFO](2022/04/15/ 03:27:12 PM) [Round: 0004] ...client 0045 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:12 PM) [Round: 0004] Start updating selected client 0072...!
+[INFO](2022/04/15/ 03:27:14 PM) [Round: 0004] ...client 0046 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:14 PM) [Round: 0004] Start updating selected client 0073...!
+[INFO](2022/04/15/ 03:27:16 PM) [Round: 0004] ...client 0052 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:16 PM) [Round: 0004] Start updating selected client 0075...!
+[INFO](2022/04/15/ 03:27:22 PM) [Round: 0004] ...client 0059 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:22 PM) [Round: 0004] Start updating selected client 0077...!
+[INFO](2022/04/15/ 03:27:26 PM) [Round: 0004] ...client 0061 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:27:26 PM) [Round: 0004] Start updating selected client 0080...!
+[INFO](2022/04/15/ 03:28:45 PM) [Round: 0004] ...client 0063 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:45 PM) [Round: 0004] Start updating selected client 0081...!
+[INFO](2022/04/15/ 03:28:48 PM) [Round: 0004] ...client 0065 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:48 PM) [Round: 0004] Start updating selected client 0082...!
+[INFO](2022/04/15/ 03:28:51 PM) [Round: 0004] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:51 PM) [Round: 0004] Start updating selected client 0083...!
+[INFO](2022/04/15/ 03:28:52 PM) [Round: 0004] ...client 0069 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:52 PM) [Round: 0004] Start updating selected client 0085...!
+[INFO](2022/04/15/ 03:28:56 PM) [Round: 0004] ...client 0070 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:56 PM) [Round: 0004] Start updating selected client 0087...!
+[INFO](2022/04/15/ 03:28:58 PM) [Round: 0004] ...client 0071 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:28:59 PM) [Round: 0004] Start updating selected client 0091...!
+[INFO](2022/04/15/ 03:29:01 PM) [Round: 0004] ...client 0072 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:01 PM) [Round: 0004] Start updating selected client 0098...!
+[INFO](2022/04/15/ 03:29:04 PM) [Round: 0004] ...client 0073 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:07 PM) [Round: 0004] ...client 0075 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:12 PM) [Round: 0004] ...client 0077 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:17 PM) [Round: 0004] ...client 0080 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:56 PM) [Round: 0004] ...client 0081 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:58 PM) [Round: 0004] ...client 0082 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:29:59 PM) [Round: 0004] ...client 0083 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:30:00 PM) [Round: 0004] ...client 0085 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:30:01 PM) [Round: 0004] ...client 0087 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:30:02 PM) [Round: 0004] ...client 0091 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:30:02 PM) [Round: 0004] ...client 0098 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:30:02 PM) [Round: 0004] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:30:06 PM) 	[Client 0008] ...finished evaluation!            
+	=> Test loss: 111.8898            
+	=> Test accuracy: 35.12%
+
+[INFO](2022/04/15/ 03:30:10 PM) 	[Client 0009] ...finished evaluation!            
+	=> Test loss: 86.2425            
+	=> Test accuracy: 37.97%
+
+[INFO](2022/04/15/ 03:30:13 PM) 	[Client 0013] ...finished evaluation!            
+	=> Test loss: 104.4060            
+	=> Test accuracy: 33.53%
+
+[INFO](2022/04/15/ 03:30:16 PM) 	[Client 0019] ...finished evaluation!            
+	=> Test loss: 80.7054            
+	=> Test accuracy: 40.60%
+
+[INFO](2022/04/15/ 03:30:20 PM) 	[Client 0020] ...finished evaluation!            
+	=> Test loss: 119.7143            
+	=> Test accuracy: 34.67%
+
+[INFO](2022/04/15/ 03:30:23 PM) 	[Client 0021] ...finished evaluation!            
+	=> Test loss: 107.9200            
+	=> Test accuracy: 33.74%
+
+[INFO](2022/04/15/ 03:30:27 PM) 	[Client 0023] ...finished evaluation!            
+	=> Test loss: 84.5053            
+	=> Test accuracy: 38.61%
+
+[INFO](2022/04/15/ 03:30:30 PM) 	[Client 0024] ...finished evaluation!            
+	=> Test loss: 83.7978            
+	=> Test accuracy: 39.92%
+
+[INFO](2022/04/15/ 03:30:34 PM) 	[Client 0025] ...finished evaluation!            
+	=> Test loss: 87.8965            
+	=> Test accuracy: 37.06%
+
+[INFO](2022/04/15/ 03:30:38 PM) 	[Client 0026] ...finished evaluation!            
+	=> Test loss: 85.7791            
+	=> Test accuracy: 36.92%
+
+[INFO](2022/04/15/ 03:30:41 PM) 	[Client 0029] ...finished evaluation!            
+	=> Test loss: 112.6625            
+	=> Test accuracy: 35.34%
+
+[INFO](2022/04/15/ 03:30:45 PM) 	[Client 0030] ...finished evaluation!            
+	=> Test loss: 88.5613            
+	=> Test accuracy: 38.32%
+
+[INFO](2022/04/15/ 03:30:48 PM) 	[Client 0032] ...finished evaluation!            
+	=> Test loss: 82.1036            
+	=> Test accuracy: 40.36%
+
+[INFO](2022/04/15/ 03:30:52 PM) 	[Client 0036] ...finished evaluation!            
+	=> Test loss: 84.7781            
+	=> Test accuracy: 37.99%
+
+[INFO](2022/04/15/ 03:30:55 PM) 	[Client 0037] ...finished evaluation!            
+	=> Test loss: 79.6591            
+	=> Test accuracy: 39.17%
+
+[INFO](2022/04/15/ 03:30:58 PM) 	[Client 0038] ...finished evaluation!            
+	=> Test loss: 118.7900            
+	=> Test accuracy: 35.91%
+
+[INFO](2022/04/15/ 03:31:02 PM) 	[Client 0044] ...finished evaluation!            
+	=> Test loss: 102.5966            
+	=> Test accuracy: 35.07%
+
+[INFO](2022/04/15/ 03:31:05 PM) 	[Client 0045] ...finished evaluation!            
+	=> Test loss: 86.0150            
+	=> Test accuracy: 36.59%
+
+[INFO](2022/04/15/ 03:31:09 PM) 	[Client 0046] ...finished evaluation!            
+	=> Test loss: 115.8401            
+	=> Test accuracy: 33.83%
+
+[INFO](2022/04/15/ 03:31:12 PM) 	[Client 0052] ...finished evaluation!            
+	=> Test loss: 84.8565            
+	=> Test accuracy: 38.58%
+
+[INFO](2022/04/15/ 03:31:16 PM) 	[Client 0059] ...finished evaluation!            
+	=> Test loss: 78.0482            
+	=> Test accuracy: 40.88%
+
+[INFO](2022/04/15/ 03:31:19 PM) 	[Client 0061] ...finished evaluation!            
+	=> Test loss: 118.2661            
+	=> Test accuracy: 33.54%
+
+[INFO](2022/04/15/ 03:31:23 PM) 	[Client 0063] ...finished evaluation!            
+	=> Test loss: 82.5163            
+	=> Test accuracy: 39.69%
+
+[INFO](2022/04/15/ 03:31:26 PM) 	[Client 0065] ...finished evaluation!            
+	=> Test loss: 89.7308            
+	=> Test accuracy: 38.66%
+
+[INFO](2022/04/15/ 03:31:30 PM) 	[Client 0067] ...finished evaluation!            
+	=> Test loss: 80.6115            
+	=> Test accuracy: 39.55%
+
+[INFO](2022/04/15/ 03:31:33 PM) 	[Client 0069] ...finished evaluation!            
+	=> Test loss: 79.9612            
+	=> Test accuracy: 38.76%
+
+[INFO](2022/04/15/ 03:31:37 PM) 	[Client 0070] ...finished evaluation!            
+	=> Test loss: 91.8324            
+	=> Test accuracy: 36.14%
+
+[INFO](2022/04/15/ 03:31:41 PM) 	[Client 0071] ...finished evaluation!            
+	=> Test loss: 81.7464            
+	=> Test accuracy: 38.56%
+
+[INFO](2022/04/15/ 03:31:44 PM) 	[Client 0072] ...finished evaluation!            
+	=> Test loss: 112.1648            
+	=> Test accuracy: 32.84%
+
+[INFO](2022/04/15/ 03:31:48 PM) 	[Client 0073] ...finished evaluation!            
+	=> Test loss: 90.2429            
+	=> Test accuracy: 38.02%
+
+[INFO](2022/04/15/ 03:31:52 PM) 	[Client 0075] ...finished evaluation!            
+	=> Test loss: 81.7369            
+	=> Test accuracy: 39.50%
+
+[INFO](2022/04/15/ 03:31:55 PM) 	[Client 0077] ...finished evaluation!            
+	=> Test loss: 87.3712            
+	=> Test accuracy: 38.68%
+
+[INFO](2022/04/15/ 03:31:59 PM) 	[Client 0080] ...finished evaluation!            
+	=> Test loss: 78.7597            
+	=> Test accuracy: 38.08%
+
+[INFO](2022/04/15/ 03:32:02 PM) 	[Client 0081] ...finished evaluation!            
+	=> Test loss: 106.4386            
+	=> Test accuracy: 37.35%
+
+[INFO](2022/04/15/ 03:32:06 PM) 	[Client 0082] ...finished evaluation!            
+	=> Test loss: 85.2179            
+	=> Test accuracy: 38.40%
+
+[INFO](2022/04/15/ 03:32:10 PM) 	[Client 0083] ...finished evaluation!            
+	=> Test loss: 107.5840            
+	=> Test accuracy: 33.77%
+
+[INFO](2022/04/15/ 03:32:13 PM) 	[Client 0085] ...finished evaluation!            
+	=> Test loss: 110.8549            
+	=> Test accuracy: 34.07%
+
+[INFO](2022/04/15/ 03:32:17 PM) 	[Client 0087] ...finished evaluation!            
+	=> Test loss: 89.1582            
+	=> Test accuracy: 39.23%
+
+[INFO](2022/04/15/ 03:32:20 PM) 	[Client 0091] ...finished evaluation!            
+	=> Test loss: 89.6300            
+	=> Test accuracy: 38.62%
+
+[INFO](2022/04/15/ 03:32:24 PM) 	[Client 0098] ...finished evaluation!            
+	=> Test loss: 121.2760            
+	=> Test accuracy: 33.02%
+
+[INFO](2022/04/15/ 03:32:24 PM) [Round: 0004] ...finished evaluation of 40 selected clients! Average accuracy = 148.66600000000003
+[INFO](2022/04/15/ 03:32:24 PM) [Round: 0004] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:32:24 PM) [Round: 0004] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:32:24 PM) [Round: 0004] Aggregate updated weights of 36 clients...!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] ...updated weights of 36 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] Aggregate updated weights of 2 clients...!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] ...updated weights of 2 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] ...updated weights of 1 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:32:25 PM) [Round: 0004] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0004] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.5053                
+	=> Accuracy: 47.63%
+
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] Select clients...!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:32:28 PM) [Round: 0005] Start updating selected client 0001...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0004...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0008...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0009...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0015...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0022...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0014...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0013...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0021...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0012...!
+[INFO](2022/04/15/ 03:32:29 PM) [Round: 0005] Start updating selected client 0010...!
+[INFO](2022/04/15/ 03:34:51 PM) [Round: 0005] ...client 0014 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:51 PM) [Round: 0005] Start updating selected client 0024...!
+[INFO](2022/04/15/ 03:34:53 PM) [Round: 0005] ...client 0010 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:53 PM) [Round: 0005] Start updating selected client 0025...!
+[INFO](2022/04/15/ 03:34:55 PM) [Round: 0005] ...client 0021 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:55 PM) [Round: 0005] Start updating selected client 0033...!
+[INFO](2022/04/15/ 03:34:55 PM) [Round: 0005] ...client 0009 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:55 PM) [Round: 0005] Start updating selected client 0034...!
+[INFO](2022/04/15/ 03:34:57 PM) [Round: 0005] ...client 0012 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:57 PM) [Round: 0005] Start updating selected client 0035...!
+[INFO](2022/04/15/ 03:34:58 PM) [Round: 0005] ...client 0015 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:34:58 PM) [Round: 0005] Start updating selected client 0036...!
+[INFO](2022/04/15/ 03:35:00 PM) [Round: 0005] ...client 0001 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:35:00 PM) [Round: 0005] Start updating selected client 0038...!
+[INFO](2022/04/15/ 03:35:01 PM) [Round: 0005] ...client 0022 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:35:01 PM) [Round: 0005] Start updating selected client 0039...!
+[INFO](2022/04/15/ 03:35:02 PM) [Round: 0005] ...client 0008 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:35:02 PM) [Round: 0005] Start updating selected client 0043...!
+[INFO](2022/04/15/ 03:35:03 PM) [Round: 0005] ...client 0013 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:35:03 PM) [Round: 0005] Start updating selected client 0047...!
+[INFO](2022/04/15/ 03:35:05 PM) [Round: 0005] ...client 0004 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:35:05 PM) [Round: 0005] Start updating selected client 0049...!
+[INFO](2022/04/15/ 03:37:00 PM) [Round: 0005] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:00 PM) [Round: 0005] Start updating selected client 0053...!
+[INFO](2022/04/15/ 03:37:02 PM) [Round: 0005] ...client 0025 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:02 PM) [Round: 0005] Start updating selected client 0057...!
+[INFO](2022/04/15/ 03:37:03 PM) [Round: 0005] ...client 0033 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:03 PM) [Round: 0005] Start updating selected client 0061...!
+[INFO](2022/04/15/ 03:37:04 PM) [Round: 0005] ...client 0034 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:04 PM) [Round: 0005] Start updating selected client 0062...!
+[INFO](2022/04/15/ 03:37:06 PM) [Round: 0005] ...client 0035 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:07 PM) [Round: 0005] Start updating selected client 0063...!
+[INFO](2022/04/15/ 03:37:07 PM) [Round: 0005] ...client 0036 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:08 PM) [Round: 0005] Start updating selected client 0067...!
+[INFO](2022/04/15/ 03:37:10 PM) [Round: 0005] ...client 0038 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:10 PM) [Round: 0005] Start updating selected client 0072...!
+[INFO](2022/04/15/ 03:37:12 PM) [Round: 0005] ...client 0039 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:12 PM) [Round: 0005] Start updating selected client 0073...!
+[INFO](2022/04/15/ 03:37:14 PM) [Round: 0005] ...client 0043 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:14 PM) [Round: 0005] Start updating selected client 0074...!
+[INFO](2022/04/15/ 03:37:16 PM) [Round: 0005] ...client 0047 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:16 PM) [Round: 0005] Start updating selected client 0077...!
+[INFO](2022/04/15/ 03:37:20 PM) [Round: 0005] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:37:20 PM) [Round: 0005] Start updating selected client 0078...!
+[INFO](2022/04/15/ 03:38:50 PM) [Round: 0005] ...client 0053 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:50 PM) [Round: 0005] Start updating selected client 0079...!
+[INFO](2022/04/15/ 03:38:52 PM) [Round: 0005] ...client 0057 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:52 PM) [Round: 0005] Start updating selected client 0082...!
+[INFO](2022/04/15/ 03:38:54 PM) [Round: 0005] ...client 0061 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:54 PM) [Round: 0005] Start updating selected client 0086...!
+[INFO](2022/04/15/ 03:38:55 PM) [Round: 0005] ...client 0062 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:55 PM) [Round: 0005] Start updating selected client 0089...!
+[INFO](2022/04/15/ 03:38:58 PM) [Round: 0005] ...client 0063 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:58 PM) [Round: 0005] Start updating selected client 0090...!
+[INFO](2022/04/15/ 03:38:59 PM) [Round: 0005] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:38:59 PM) [Round: 0005] Start updating selected client 0097...!
+[INFO](2022/04/15/ 03:39:02 PM) [Round: 0005] ...client 0072 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:39:02 PM) [Round: 0005] Start updating selected client 0098...!
+[INFO](2022/04/15/ 03:39:05 PM) [Round: 0005] ...client 0073 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:39:06 PM) [Round: 0005] ...client 0074 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:39:09 PM) [Round: 0005] ...client 0077 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:39:13 PM) [Round: 0005] ...client 0078 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:02 PM) [Round: 0005] ...client 0079 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:04 PM) [Round: 0005] ...client 0082 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:05 PM) [Round: 0005] ...client 0086 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:05 PM) [Round: 0005] ...client 0089 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:06 PM) [Round: 0005] ...client 0090 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:06 PM) [Round: 0005] ...client 0097 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:07 PM) [Round: 0005] ...client 0098 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:40:07 PM) [Round: 0005] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:40:11 PM) 	[Client 0001] ...finished evaluation!            
+	=> Test loss: 91.4833            
+	=> Test accuracy: 37.64%
+
+[INFO](2022/04/15/ 03:40:14 PM) 	[Client 0004] ...finished evaluation!            
+	=> Test loss: 106.1076            
+	=> Test accuracy: 34.02%
+
+[INFO](2022/04/15/ 03:40:18 PM) 	[Client 0008] ...finished evaluation!            
+	=> Test loss: 79.7820            
+	=> Test accuracy: 40.32%
+
+[INFO](2022/04/15/ 03:40:22 PM) 	[Client 0009] ...finished evaluation!            
+	=> Test loss: 77.3886            
+	=> Test accuracy: 40.21%
+
+[INFO](2022/04/15/ 03:40:25 PM) 	[Client 0010] ...finished evaluation!            
+	=> Test loss: 90.8906            
+	=> Test accuracy: 38.62%
+
+[INFO](2022/04/15/ 03:40:29 PM) 	[Client 0012] ...finished evaluation!            
+	=> Test loss: 107.3111            
+	=> Test accuracy: 35.65%
+
+[INFO](2022/04/15/ 03:40:33 PM) 	[Client 0013] ...finished evaluation!            
+	=> Test loss: 78.7309            
+	=> Test accuracy: 38.00%
+
+[INFO](2022/04/15/ 03:40:36 PM) 	[Client 0014] ...finished evaluation!            
+	=> Test loss: 87.6587            
+	=> Test accuracy: 38.77%
+
+[INFO](2022/04/15/ 03:40:40 PM) 	[Client 0015] ...finished evaluation!            
+	=> Test loss: 85.0604            
+	=> Test accuracy: 39.89%
+
+[INFO](2022/04/15/ 03:40:43 PM) 	[Client 0021] ...finished evaluation!            
+	=> Test loss: 83.1445            
+	=> Test accuracy: 39.48%
+
+[INFO](2022/04/15/ 03:40:47 PM) 	[Client 0022] ...finished evaluation!            
+	=> Test loss: 86.5482            
+	=> Test accuracy: 38.69%
+
+[INFO](2022/04/15/ 03:40:51 PM) 	[Client 0024] ...finished evaluation!            
+	=> Test loss: 83.7426            
+	=> Test accuracy: 39.24%
+
+[INFO](2022/04/15/ 03:40:54 PM) 	[Client 0025] ...finished evaluation!            
+	=> Test loss: 80.6838            
+	=> Test accuracy: 39.91%
+
+[INFO](2022/04/15/ 03:40:58 PM) 	[Client 0033] ...finished evaluation!            
+	=> Test loss: 103.5165            
+	=> Test accuracy: 36.28%
+
+[INFO](2022/04/15/ 03:41:02 PM) 	[Client 0034] ...finished evaluation!            
+	=> Test loss: 80.5900            
+	=> Test accuracy: 37.27%
+
+[INFO](2022/04/15/ 03:41:05 PM) 	[Client 0035] ...finished evaluation!            
+	=> Test loss: 84.2364            
+	=> Test accuracy: 38.45%
+
+[INFO](2022/04/15/ 03:41:09 PM) 	[Client 0036] ...finished evaluation!            
+	=> Test loss: 80.1601            
+	=> Test accuracy: 40.24%
+
+[INFO](2022/04/15/ 03:41:13 PM) 	[Client 0038] ...finished evaluation!            
+	=> Test loss: 128.9520            
+	=> Test accuracy: 35.92%
+
+[INFO](2022/04/15/ 03:41:16 PM) 	[Client 0039] ...finished evaluation!            
+	=> Test loss: 96.2612            
+	=> Test accuracy: 35.12%
+
+[INFO](2022/04/15/ 03:41:20 PM) 	[Client 0043] ...finished evaluation!            
+	=> Test loss: 120.0068            
+	=> Test accuracy: 32.58%
+
+[INFO](2022/04/15/ 03:41:24 PM) 	[Client 0047] ...finished evaluation!            
+	=> Test loss: 84.2354            
+	=> Test accuracy: 39.01%
+
+[INFO](2022/04/15/ 03:41:27 PM) 	[Client 0049] ...finished evaluation!            
+	=> Test loss: 92.4207            
+	=> Test accuracy: 38.54%
+
+[INFO](2022/04/15/ 03:41:31 PM) 	[Client 0053] ...finished evaluation!            
+	=> Test loss: 107.2453            
+	=> Test accuracy: 36.35%
+
+[INFO](2022/04/15/ 03:41:34 PM) 	[Client 0057] ...finished evaluation!            
+	=> Test loss: 82.8466            
+	=> Test accuracy: 37.72%
+
+[INFO](2022/04/15/ 03:41:38 PM) 	[Client 0061] ...finished evaluation!            
+	=> Test loss: 82.1554            
+	=> Test accuracy: 40.59%
+
+[INFO](2022/04/15/ 03:41:42 PM) 	[Client 0062] ...finished evaluation!            
+	=> Test loss: 74.8319            
+	=> Test accuracy: 39.61%
+
+[INFO](2022/04/15/ 03:41:45 PM) 	[Client 0063] ...finished evaluation!            
+	=> Test loss: 83.4865            
+	=> Test accuracy: 39.72%
+
+[INFO](2022/04/15/ 03:41:49 PM) 	[Client 0067] ...finished evaluation!            
+	=> Test loss: 79.4530            
+	=> Test accuracy: 39.21%
+
+[INFO](2022/04/15/ 03:41:53 PM) 	[Client 0072] ...finished evaluation!            
+	=> Test loss: 77.9258            
+	=> Test accuracy: 39.50%
+
+[INFO](2022/04/15/ 03:41:56 PM) 	[Client 0073] ...finished evaluation!            
+	=> Test loss: 83.2472            
+	=> Test accuracy: 40.80%
+
+[INFO](2022/04/15/ 03:42:00 PM) 	[Client 0074] ...finished evaluation!            
+	=> Test loss: 90.4045            
+	=> Test accuracy: 36.14%
+
+[INFO](2022/04/15/ 03:42:04 PM) 	[Client 0077] ...finished evaluation!            
+	=> Test loss: 78.9152            
+	=> Test accuracy: 40.59%
+
+[INFO](2022/04/15/ 03:42:07 PM) 	[Client 0078] ...finished evaluation!            
+	=> Test loss: 90.1845            
+	=> Test accuracy: 38.83%
+
+[INFO](2022/04/15/ 03:42:11 PM) 	[Client 0079] ...finished evaluation!            
+	=> Test loss: 95.5833            
+	=> Test accuracy: 37.03%
+
+[INFO](2022/04/15/ 03:42:15 PM) 	[Client 0082] ...finished evaluation!            
+	=> Test loss: 80.4879            
+	=> Test accuracy: 37.85%
+
+[INFO](2022/04/15/ 03:42:18 PM) 	[Client 0086] ...finished evaluation!            
+	=> Test loss: 83.1976            
+	=> Test accuracy: 39.80%
+
+[INFO](2022/04/15/ 03:42:22 PM) 	[Client 0089] ...finished evaluation!            
+	=> Test loss: 117.0484            
+	=> Test accuracy: 33.16%
+
+[INFO](2022/04/15/ 03:42:26 PM) 	[Client 0090] ...finished evaluation!            
+	=> Test loss: 100.6336            
+	=> Test accuracy: 35.44%
+
+[INFO](2022/04/15/ 03:42:29 PM) 	[Client 0097] ...finished evaluation!            
+	=> Test loss: 107.4655            
+	=> Test accuracy: 35.02%
+
+[INFO](2022/04/15/ 03:42:33 PM) 	[Client 0098] ...finished evaluation!            
+	=> Test loss: 131.7797            
+	=> Test accuracy: 33.25%
+
+[INFO](2022/04/15/ 03:42:33 PM) [Round: 0005] ...finished evaluation of 40 selected clients! Average accuracy = 151.446
+[INFO](2022/04/15/ 03:42:33 PM) [Round: 0005] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:42:33 PM) [Round: 0005] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:42:33 PM) [Round: 0005] Aggregate updated weights of 21 clients...!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] ...updated weights of 21 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] Aggregate updated weights of 17 clients...!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] ...updated weights of 17 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] ...updated weights of 1 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:42:34 PM) [Round: 0005] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0005] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.4830                
+	=> Accuracy: 47.80%
+
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Select clients...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0003...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0009...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0010...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0013...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0008...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0017...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0019...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0015...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0023...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0018...!
+[INFO](2022/04/15/ 03:42:38 PM) [Round: 0006] Start updating selected client 0011...!
+[INFO](2022/04/15/ 03:44:29 PM) [Round: 0006] ...client 0008 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:30 PM) [Round: 0006] Start updating selected client 0027...!
+[INFO](2022/04/15/ 03:44:32 PM) [Round: 0006] ...client 0017 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:32 PM) [Round: 0006] Start updating selected client 0031...!
+[INFO](2022/04/15/ 03:44:33 PM) [Round: 0006] ...client 0003 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:33 PM) [Round: 0006] Start updating selected client 0032...!
+[INFO](2022/04/15/ 03:44:34 PM) [Round: 0006] ...client 0015 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:34 PM) [Round: 0006] Start updating selected client 0034...!
+[INFO](2022/04/15/ 03:44:36 PM) [Round: 0006] ...client 0009 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:36 PM) [Round: 0006] Start updating selected client 0036...!
+[INFO](2022/04/15/ 03:44:36 PM) [Round: 0006] ...client 0013 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:36 PM) [Round: 0006] Start updating selected client 0038...!
+[INFO](2022/04/15/ 03:44:37 PM) [Round: 0006] ...client 0019 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:37 PM) [Round: 0006] Start updating selected client 0043...!
+[INFO](2022/04/15/ 03:44:38 PM) [Round: 0006] ...client 0011 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:38 PM) [Round: 0006] Start updating selected client 0044...!
+[INFO](2022/04/15/ 03:44:39 PM) [Round: 0006] ...client 0018 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:39 PM) [Round: 0006] Start updating selected client 0049...!
+[INFO](2022/04/15/ 03:44:41 PM) [Round: 0006] ...client 0023 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:41 PM) [Round: 0006] Start updating selected client 0051...!
+[INFO](2022/04/15/ 03:44:42 PM) [Round: 0006] ...client 0010 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:44:42 PM) [Round: 0006] Start updating selected client 0056...!
+[INFO](2022/04/15/ 03:46:21 PM) [Round: 0006] ...client 0027 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:21 PM) [Round: 0006] Start updating selected client 0060...!
+[INFO](2022/04/15/ 03:46:24 PM) [Round: 0006] ...client 0031 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:24 PM) [Round: 0006] Start updating selected client 0061...!
+[INFO](2022/04/15/ 03:46:26 PM) [Round: 0006] ...client 0032 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:26 PM) [Round: 0006] Start updating selected client 0062...!
+[INFO](2022/04/15/ 03:46:27 PM) [Round: 0006] ...client 0034 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:28 PM) [Round: 0006] Start updating selected client 0064...!
+[INFO](2022/04/15/ 03:46:29 PM) [Round: 0006] ...client 0036 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:29 PM) [Round: 0006] Start updating selected client 0065...!
+[INFO](2022/04/15/ 03:46:30 PM) [Round: 0006] ...client 0038 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:30 PM) [Round: 0006] Start updating selected client 0066...!
+[INFO](2022/04/15/ 03:46:32 PM) [Round: 0006] ...client 0043 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:32 PM) [Round: 0006] Start updating selected client 0068...!
+[INFO](2022/04/15/ 03:46:33 PM) [Round: 0006] ...client 0044 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:33 PM) [Round: 0006] Start updating selected client 0072...!
+[INFO](2022/04/15/ 03:46:36 PM) [Round: 0006] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:36 PM) [Round: 0006] Start updating selected client 0073...!
+[INFO](2022/04/15/ 03:46:38 PM) [Round: 0006] ...client 0051 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:38 PM) [Round: 0006] Start updating selected client 0076...!
+[INFO](2022/04/15/ 03:46:41 PM) [Round: 0006] ...client 0056 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:46:41 PM) [Round: 0006] Start updating selected client 0082...!
+[INFO](2022/04/15/ 03:48:12 PM) [Round: 0006] ...client 0060 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:12 PM) [Round: 0006] Start updating selected client 0084...!
+[INFO](2022/04/15/ 03:48:14 PM) [Round: 0006] ...client 0061 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:14 PM) [Round: 0006] Start updating selected client 0085...!
+[INFO](2022/04/15/ 03:48:17 PM) [Round: 0006] ...client 0062 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:17 PM) [Round: 0006] Start updating selected client 0089...!
+[INFO](2022/04/15/ 03:48:19 PM) [Round: 0006] ...client 0064 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:19 PM) [Round: 0006] Start updating selected client 0090...!
+[INFO](2022/04/15/ 03:48:22 PM) [Round: 0006] ...client 0065 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:22 PM) [Round: 0006] Start updating selected client 0093...!
+[INFO](2022/04/15/ 03:48:24 PM) [Round: 0006] ...client 0066 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:24 PM) [Round: 0006] Start updating selected client 0094...!
+[INFO](2022/04/15/ 03:48:26 PM) [Round: 0006] ...client 0068 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:26 PM) [Round: 0006] Start updating selected client 0096...!
+[INFO](2022/04/15/ 03:48:30 PM) [Round: 0006] ...client 0072 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:33 PM) [Round: 0006] ...client 0073 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:36 PM) [Round: 0006] ...client 0076 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:48:40 PM) [Round: 0006] ...client 0082 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:33 PM) [Round: 0006] ...client 0084 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:35 PM) [Round: 0006] ...client 0085 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:36 PM) [Round: 0006] ...client 0089 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:37 PM) [Round: 0006] ...client 0090 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:37 PM) [Round: 0006] ...client 0093 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:38 PM) [Round: 0006] ...client 0094 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:38 PM) [Round: 0006] ...client 0096 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:49:38 PM) [Round: 0006] Evaluate selected 40 clients' models...!
+[INFO](2022/04/15/ 03:49:42 PM) 	[Client 0003] ...finished evaluation!            
+	=> Test loss: 115.3618            
+	=> Test accuracy: 31.96%
+
+[INFO](2022/04/15/ 03:49:45 PM) 	[Client 0008] ...finished evaluation!            
+	=> Test loss: 76.2475            
+	=> Test accuracy: 41.30%
+
+[INFO](2022/04/15/ 03:49:49 PM) 	[Client 0009] ...finished evaluation!            
+	=> Test loss: 74.8502            
+	=> Test accuracy: 41.06%
+
+[INFO](2022/04/15/ 03:49:53 PM) 	[Client 0010] ...finished evaluation!            
+	=> Test loss: 80.9704            
+	=> Test accuracy: 39.84%
+
+[INFO](2022/04/15/ 03:49:57 PM) 	[Client 0011] ...finished evaluation!            
+	=> Test loss: 84.6157            
+	=> Test accuracy: 39.98%
+
+[INFO](2022/04/15/ 03:50:00 PM) 	[Client 0013] ...finished evaluation!            
+	=> Test loss: 78.4683            
+	=> Test accuracy: 38.87%
+
+[INFO](2022/04/15/ 03:50:03 PM) 	[Client 0015] ...finished evaluation!            
+	=> Test loss: 79.8283            
+	=> Test accuracy: 41.31%
+
+[INFO](2022/04/15/ 03:50:07 PM) 	[Client 0017] ...finished evaluation!            
+	=> Test loss: 75.9066            
+	=> Test accuracy: 40.59%
+
+[INFO](2022/04/15/ 03:50:11 PM) 	[Client 0018] ...finished evaluation!            
+	=> Test loss: 112.4432            
+	=> Test accuracy: 34.48%
+
+[INFO](2022/04/15/ 03:50:14 PM) 	[Client 0019] ...finished evaluation!            
+	=> Test loss: 71.8009            
+	=> Test accuracy: 41.87%
+
+[INFO](2022/04/15/ 03:50:18 PM) 	[Client 0023] ...finished evaluation!            
+	=> Test loss: 77.7591            
+	=> Test accuracy: 40.65%
+
+[INFO](2022/04/15/ 03:50:22 PM) 	[Client 0027] ...finished evaluation!            
+	=> Test loss: 77.2266            
+	=> Test accuracy: 41.03%
+
+[INFO](2022/04/15/ 03:50:25 PM) 	[Client 0031] ...finished evaluation!            
+	=> Test loss: 76.1111            
+	=> Test accuracy: 39.44%
+
+[INFO](2022/04/15/ 03:50:29 PM) 	[Client 0032] ...finished evaluation!            
+	=> Test loss: 77.7512            
+	=> Test accuracy: 40.11%
+
+[INFO](2022/04/15/ 03:50:32 PM) 	[Client 0034] ...finished evaluation!            
+	=> Test loss: 77.2760            
+	=> Test accuracy: 38.45%
+
+[INFO](2022/04/15/ 03:50:36 PM) 	[Client 0036] ...finished evaluation!            
+	=> Test loss: 72.7079            
+	=> Test accuracy: 41.10%
+
+[INFO](2022/04/15/ 03:50:39 PM) 	[Client 0038] ...finished evaluation!            
+	=> Test loss: 134.3030            
+	=> Test accuracy: 35.95%
+
+[INFO](2022/04/15/ 03:50:43 PM) 	[Client 0043] ...finished evaluation!            
+	=> Test loss: 76.3610            
+	=> Test accuracy: 38.40%
+
+[INFO](2022/04/15/ 03:50:47 PM) 	[Client 0044] ...finished evaluation!            
+	=> Test loss: 79.8871            
+	=> Test accuracy: 40.99%
+
+[INFO](2022/04/15/ 03:50:50 PM) 	[Client 0049] ...finished evaluation!            
+	=> Test loss: 80.2500            
+	=> Test accuracy: 39.70%
+
+[INFO](2022/04/15/ 03:50:54 PM) 	[Client 0051] ...finished evaluation!            
+	=> Test loss: 75.3463            
+	=> Test accuracy: 41.58%
+
+[INFO](2022/04/15/ 03:50:57 PM) 	[Client 0056] ...finished evaluation!            
+	=> Test loss: 78.1400            
+	=> Test accuracy: 40.55%
+
+[INFO](2022/04/15/ 03:51:01 PM) 	[Client 0060] ...finished evaluation!            
+	=> Test loss: 78.5022            
+	=> Test accuracy: 40.70%
+
+[INFO](2022/04/15/ 03:51:05 PM) 	[Client 0061] ...finished evaluation!            
+	=> Test loss: 77.5564            
+	=> Test accuracy: 41.09%
+
+[INFO](2022/04/15/ 03:51:09 PM) 	[Client 0062] ...finished evaluation!            
+	=> Test loss: 75.5269            
+	=> Test accuracy: 40.96%
+
+[INFO](2022/04/15/ 03:51:13 PM) 	[Client 0064] ...finished evaluation!            
+	=> Test loss: 81.2642            
+	=> Test accuracy: 40.09%
+
+[INFO](2022/04/15/ 03:51:17 PM) 	[Client 0065] ...finished evaluation!            
+	=> Test loss: 78.4511            
+	=> Test accuracy: 41.21%
+
+[INFO](2022/04/15/ 03:51:20 PM) 	[Client 0066] ...finished evaluation!            
+	=> Test loss: 116.2861            
+	=> Test accuracy: 32.48%
+
+[INFO](2022/04/15/ 03:51:24 PM) 	[Client 0068] ...finished evaluation!            
+	=> Test loss: 85.1880            
+	=> Test accuracy: 38.16%
+
+[INFO](2022/04/15/ 03:51:27 PM) 	[Client 0072] ...finished evaluation!            
+	=> Test loss: 73.1828            
+	=> Test accuracy: 39.84%
+
+[INFO](2022/04/15/ 03:51:31 PM) 	[Client 0073] ...finished evaluation!            
+	=> Test loss: 78.3841            
+	=> Test accuracy: 41.08%
+
+[INFO](2022/04/15/ 03:51:35 PM) 	[Client 0076] ...finished evaluation!            
+	=> Test loss: 77.6968            
+	=> Test accuracy: 41.00%
+
+[INFO](2022/04/15/ 03:51:38 PM) 	[Client 0082] ...finished evaluation!            
+	=> Test loss: 82.5894            
+	=> Test accuracy: 38.90%
+
+[INFO](2022/04/15/ 03:51:42 PM) 	[Client 0084] ...finished evaluation!            
+	=> Test loss: 107.7512            
+	=> Test accuracy: 35.09%
+
+[INFO](2022/04/15/ 03:51:46 PM) 	[Client 0085] ...finished evaluation!            
+	=> Test loss: 77.6479            
+	=> Test accuracy: 39.92%
+
+[INFO](2022/04/15/ 03:51:50 PM) 	[Client 0089] ...finished evaluation!            
+	=> Test loss: 81.4520            
+	=> Test accuracy: 39.57%
+
+[INFO](2022/04/15/ 03:51:54 PM) 	[Client 0090] ...finished evaluation!            
+	=> Test loss: 77.1363            
+	=> Test accuracy: 39.83%
+
+[INFO](2022/04/15/ 03:51:58 PM) 	[Client 0093] ...finished evaluation!            
+	=> Test loss: 115.1038            
+	=> Test accuracy: 35.65%
+
+[INFO](2022/04/15/ 03:52:02 PM) 	[Client 0094] ...finished evaluation!            
+	=> Test loss: 102.7148            
+	=> Test accuracy: 35.10%
+
+[INFO](2022/04/15/ 03:52:05 PM) 	[Client 0096] ...finished evaluation!            
+	=> Test loss: 105.8072            
+	=> Test accuracy: 34.02%
+
+[INFO](2022/04/15/ 03:52:05 PM) [Round: 0006] ...finished evaluation of 40 selected clients! Average accuracy = 156.39000000000004
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] Aggregate updated weights of 40 clients...!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] ...updated weights of 40 clients are successfully averaged!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] Aggregate updated weights of 22 clients...!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] ...updated weights of 22 clients of cluster 1 are successfully averaged!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] Aggregate updated weights of 16 clients...!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] ...updated weights of 16 clients of cluster 2 are successfully averaged!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] ...updated weights of 1 clients of cluster 3 are successfully averaged!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] Aggregate updated weights of 1 clients...!
+[INFO](2022/04/15/ 03:52:06 PM) [Round: 0006] ...updated weights of 1 clients of cluster 4 are successfully averaged!
+[INFO](2022/04/15/ 03:52:09 PM) [Round: 0006] Evaluate global model's performance...!                
+	[Server] ...finished evaluation!                
+	=> Loss: 1.4720                
+	=> Accuracy: 49.01%
+
+[INFO](2022/04/15/ 03:52:09 PM) [Round: 0007] Select clients...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] ...successfully transmitted models to 40 selected clients of cluster 1!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] ...successfully transmitted models to 40 selected clients of cluster 2!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] ...successfully transmitted models to 40 selected clients of cluster 3!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] ...successfully transmitted models to 40 selected clients of cluster 4!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0000...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0001...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0003...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0004...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0006...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0008...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0017...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0019...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0014...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0007...!
+[INFO](2022/04/15/ 03:52:10 PM) [Round: 0007] Start updating selected client 0011...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0021...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0024...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0030...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0026...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0033...!
+[INFO](2022/04/15/ 03:52:35 PM) [Round: 0007] Start updating selected client 0034...!
+[INFO](2022/04/15/ 03:54:24 PM) [Round: 0007] ...client 0004 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:25 PM) [Round: 0007] Start updating selected client 0037...!
+[INFO](2022/04/15/ 03:54:31 PM) [Round: 0007] ...client 0001 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:31 PM) [Round: 0007] Start updating selected client 0038...!
+[INFO](2022/04/15/ 03:54:32 PM) [Round: 0007] ...client 0008 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:32 PM) [Round: 0007] Start updating selected client 0039...!
+[INFO](2022/04/15/ 03:54:34 PM) [Round: 0007] ...client 0011 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:34 PM) [Round: 0007] Start updating selected client 0040...!
+[INFO](2022/04/15/ 03:54:39 PM) [Round: 0007] ...client 0017 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:39 PM) [Round: 0007] Start updating selected client 0044...!
+[INFO](2022/04/15/ 03:54:42 PM) [Round: 0007] Start updating selected client 0047...!
+[INFO](2022/04/15/ 03:54:51 PM) [Round: 0007] ...client 0030 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:51 PM) [Round: 0007] Start updating selected client 0049...!
+[INFO](2022/04/15/ 03:54:51 PM) [Round: 0007] ...client 0024 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:51 PM) [Round: 0007] Start updating selected client 0051...!
+[INFO](2022/04/15/ 03:54:52 PM) [Round: 0007] ...client 0034 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:52 PM) [Round: 0007] Start updating selected client 0058...!
+[INFO](2022/04/15/ 03:54:53 PM) [Round: 0007] ...client 0021 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:53 PM) [Round: 0007] Start updating selected client 0064...!
+[INFO](2022/04/15/ 03:54:58 PM) [Round: 0007] ...client 0033 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:54:58 PM) [Round: 0007] Start updating selected client 0066...!
+[INFO](2022/04/15/ 03:56:36 PM) [Round: 0007] ...client 0037 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:36 PM) [Round: 0007] Start updating selected client 0067...!
+[INFO](2022/04/15/ 03:56:45 PM) [Round: 0007] ...client 0038 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:45 PM) [Round: 0007] Start updating selected client 0068...!
+[INFO](2022/04/15/ 03:56:46 PM) [Round: 0007] ...client 0039 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:46 PM) [Round: 0007] Start updating selected client 0069...!
+[INFO](2022/04/15/ 03:56:49 PM) [Round: 0007] ...client 0040 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:49 PM) [Round: 0007] Start updating selected client 0070...!
+[INFO](2022/04/15/ 03:56:56 PM) [Round: 0007] ...client 0044 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:56 PM) [Round: 0007] Start updating selected client 0072...!
+[INFO](2022/04/15/ 03:56:57 PM) [Round: 0007] ...client 0047 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:56:57 PM) [Round: 0007] Start updating selected client 0079...!
+[INFO](2022/04/15/ 03:57:01 PM) [Round: 0007] ...client 0049 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:57:01 PM) [Round: 0007] Start updating selected client 0084...!
+[INFO](2022/04/15/ 03:57:02 PM) [Round: 0007] ...client 0051 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:57:02 PM) [Round: 0007] Start updating selected client 0086...!
+[INFO](2022/04/15/ 03:57:03 PM) [Round: 0007] ...client 0058 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:57:03 PM) [Round: 0007] Start updating selected client 0090...!
+[INFO](2022/04/15/ 03:57:04 PM) [Round: 0007] ...client 0064 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:57:04 PM) [Round: 0007] Start updating selected client 0093...!
+[INFO](2022/04/15/ 03:57:11 PM) [Round: 0007] ...client 0066 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:57:11 PM) [Round: 0007] Start updating selected client 0097...!
+[INFO](2022/04/15/ 03:58:27 PM) [Round: 0007] ...client 0067 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:27 PM) [Round: 0007] Start updating selected client 0098...!
+[INFO](2022/04/15/ 03:58:39 PM) [Round: 0007] ...client 0068 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:40 PM) [Round: 0007] ...client 0069 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:43 PM) [Round: 0007] ...client 0070 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:49 PM) [Round: 0007] ...client 0079 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:50 PM) [Round: 0007] ...client 0072 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:50 PM) [Round: 0007] ...client 0084 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:50 PM) [Round: 0007] ...client 0086 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:51 PM) [Round: 0007] ...client 0090 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:51 PM) [Round: 0007] ...client 0093 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:52 PM) [Round: 0007] ...client 0097 is selected and updated (with total sample size: 500)!
+[INFO](2022/04/15/ 03:58:57 PM) [Round: 0007] ...client 0098 is selected and updated (with total sample size: 500)!
