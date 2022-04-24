@@ -16,7 +16,7 @@ CS776: Group 6: Foresight (Ankur, Debarsho Sannyasi, Priyanshu Agarwal, Yuvraj)
 ## Run
 * `python3 main.py`
 
-## Configuration file details
+## Configuration file details (`config.yaml`)
 * Number of clients: K (K = 100)
 * Fraction of sampled clients: C
 * Number of rounds: R
@@ -28,4 +28,10 @@ CS776: Group 6: Foresight (Ankur, Debarsho Sannyasi, Priyanshu Agarwal, Yuvraj)
 * Learning rate: 0.01
 * Momentum: 0.9
 * Initialization: Xavier
+
+## src directory details
+* `client.py`: Defines all the client side activites, like client model training, evaluation, etc.
+* `server.py`: Defines all the SERVER side activites, like the clustering algorithm, training and evaluation of the global models, setting up the server and the client models, etc.
+* `models.py`: Defines all the model architectures. We have mainly used CNN2. 
+* `utils.py`: Consists of various utility functions such as creation of various datasets, initializing the models, etc.
 
