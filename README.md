@@ -17,11 +17,12 @@ CS776: Group 6: Foresight (Ankur, Debarsho Sannyasi, Priyanshu Agarwal, Yuvraj)
 * `python3 main.py`
 
 ## Configuration file details
-* Number of clients: 100 (K = 100)
-* Fraction of sampled clients: 0.1 (C = 0.1)
-* Number of rounds: 500 (R = 500)
-* Number of local epochs: 10 (E = 10)
-* Batch size: 10 (B = 10)
+* Number of clients: K (K = 100)
+* Fraction of sampled clients: C
+* Number of rounds: R
+* Number of local epochs: E (E = 50)
+* Batch size: B (B = 20)
+* Number of Clusters: NC (NC=4)
 * Optimizer: `torch.optim.SGD`
 * Criterion: `torch.nn.CrossEntropyLoss`
 * Learning rate: 0.01
