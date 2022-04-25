@@ -295,7 +295,7 @@ class Server(object):
         for idx in sampled_client_indices:
             tl, ta = self.clients[idx].client_evaluate()
             acc += ta
-        acc = acc*10
+        acc = acc*100/(len(sampled_client_indices))
         self.acc.append(acc)
 
         message = f"[Round: {str(self._round).zfill(4)}] ...finished evaluation of {str(len(sampled_client_indices))} selected clients! Average accuracy = {acc}"
@@ -313,15 +313,21 @@ class Server(object):
             outputs.append(np.asarray(self.clients[idx].give_output(self.u_data).cpu()).flatten())
 
         outputs = np.asarray(outputs)
-        #kmeans = KMeans(n_clusters = self.num_clusters-1, random_state=0).fit(outputs)
-        spec = SpectralClustering(n_clusters=self.num_clusters-1, assign_labels='discretize', random_state=0).fit(outputs)
+
+		# Choose the clustering algorithm
+        kmeans = KMeans(n_clusters = self.num_clusters-1, random_state=0).fit(outputs)
+        #spec = SpectralClustering(n_clusters=self.num_clusters-1, assign_labels='discretize', random_state=0).fit(outputs)
+		#hier = AgglomerativeClustering(n_clusters=self.num_clusters-1).fit(outputs)
         
 
         print(self.clusters)
 
         for i,idx in enumerate(indices):
-            # self.clusters[idx] = kmeans.labels_[i]+1
-            self.clusters[idx] = spec.labels_[i]+1
+			
+			# Make appropriate change here according to the chosen clustering algorithm
+            self.clusters[idx] = kmeans.labels_[i]+1
+            #self.clusters[idx] = spec.labels_[i]+1
+			#self.clusters[idx] = hier.labels_[i]+1
 
         print(self.clusters)
 
