@@ -35,4 +35,7 @@ CS776: Group 6: Foresight (Ankur, Debarsho Sannyasi, Priyanshu Agarwal, Yuvraj)
 * `models.py`: Defines all the model architectures. We have mainly used CNN2. 
 * `utils.py`: Consists of various utility functions such as creation of various datasets, initializing the models, etc.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8134c6f5148d1691950cd0a25cef0e2f99d06f31
